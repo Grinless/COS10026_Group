@@ -1,6 +1,8 @@
 *{font-family:sans-serif; color:#2F4F4F;}
 #intro{color:#525252; background-color:#cccccc;}
-.superscript{vertical-align:super;font-size:50%;}
+.reference{vertical-align:super;font-size:50%;}
+/*wip code, make list numbers superscript*/
+.reference ol::before{vertical-align:super;font-size:50%;}
 
 .index::before {
     background-image: url("/styles/images/Wires.jpg");
