@@ -8,87 +8,98 @@
 <title>JSON Quiz</title>
 </head>
 <body>
-    <header>
+	<header>
         <!-- Navigation bar and title-->
         <h1> {JSON} </h1>
         <figure>
             <a href="https://json.org">
-                <img src="jsonlogo.png" alt="JSON logo">
+                <img src="images/JSON_logo.png" alt="JSON logo">
             </a>
             <figcaption>Click to go to json.org</figcaption>
         </figure>
     </header>
+    <nav>
+        <a href="index.html">Home</a>|
+        <a href="topic.html">More info</a>|
+        <a href="quiz.html">Quiz</a>|
+        <a href="enhancements">Enhancements</a>
+    </nav>
 
-    <!-- Questions.-->
-    <fieldset>
-        <label for="fname">First Name</label> 
-        <input type ="text" id="fname" name="fname">
-        <br>
-        <label for="lname">Last Name</label>
-        <input type ="text" id="lname" name="lname">
-        <br>
-        <label for="studentnum">Student Number</label>
-        <input type ="text" id="studentnum" name="studentnum">
-    </fieldset>
+    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+        <!-- Questions.-->
+        <fieldset>
+            <label for="fname">First Name: </label> 
+            <input type ="text" id="fname" name="fname">
+            <br>
+            <label for="lname">Last Name: </label>
+            <input type ="text" id="lname" name="lname">
+            <br>
+            <label for="studentnum">Student Number: </label>
+            <input type ="text" id="studentnum" name="studentnum">
+        </fieldset>
+
+        <fieldset>
+            <legend> Student Information. </legend>
+            <!--String question-->
+            <label for="jsonUseCase">What is your most probable use case for JSON:</label>
+            <br>
+            <input type="text" id="jsonUseCase" name="jsonUseCase"> 
+            <br>
+        </fieldset>
+
+        <!--Radio buttons (What does JSON stand for?)-->
+        <fieldset>
+            <legend>What does JSON stand for</legend>
+            <label for="jackstandsonned">Jack Stands On Ned: </label>
+            <input type="radio" id="jackstandsonned" name="acroselected" value="jsonacronym"/> <br>
+            <label for="jargonsysopnull">Jargon System Operation Nullifier: </label>
+            <input type="radio" id="jargonsysopnull" name="acroselected" value="option1">   <br>
+            <label for="javasptObjNote"> JavaScript Object Notiation: </label>
+            <input type="radio" id="option1" name="option1" value="option1">
+            <br>
+        </fieldset>
+
+        <!--Check box question-->
+        <fieldset>
+            <legend>Who were the creators of JSON</legend>
+            <label for="fredmuffintop">Fred Muffintop</label>
+            <input type="checkbox" id="fredmuffintop" name="jsoncreator" value="Fred Muffintop">
+            <br> 
+            <label for="chipmorningstar">Chip Morningstar</label>
+            <input type="checkbox" id="chipmorningstar" name="jsoncreator" value="Chip Morningstar">
+            <br>
+            <label for="lucifermorningstar">Lucifer Morningstar</label>
+            <input type="checkbox" id="lucifermorningstar" name="jsoncreator" value="Lucifer Morningstar">
+            <br>
+            <label for="douglascrockford">Douglas Crockford</label>
+            <input type="checkbox" id="douglascrockford" name="jsoncreator" value="Douglas Crockford">
+            <br>
+            <label for="zachsummersby">Zach Summersby</label>
+            <input type="checkbox" id="douglascrockford" name="jsoncreator" value="Zach Summersby">
+            <br>
+            <label for="jimmyneutron">Jimmy Neutron</label>
+            <input type="checkbox" id="jimmyneutron" name="jsoncreator" value="Jimmy Neutron">
+            <br>
+        </fieldset>
+
+        <!--Drop down-->
+        <fieldset>
+            <label for="dropdownquest">Select an option.</label>
+                <select id="dropdownquest" name="dropdownquest">
+                    <option value="dropOpt1"select></option>
+                    <option value="dropOpt1"Option 1></option>
+                    <option value="dropOpt2"Option 2></option>
+                    <option value="dropOpt3"Option 3></option>
+                </select> 
+        </fieldset>
+
+        <fieldset>
+            <label for="date">Date</label>
+            <input type="datetime-local" id="date" name="date">
+        </fieldset>
+    </form>
     
-    <fieldset>
-        <!--String question-->
-        <label for="jsonUseCase">What are you most likely to implement JSON for in your personal projects:</label>
-        <br>
-        <input type="text" id="jsonUseCase" name="jsonUseCase"> 
-        <br><br>
-
-        <!--Radio buttons-->
-        <label for="option1">Option One</label>
-        <input type="radio" id="option1" name="option1" value="option1">
-        <label for="option1">Option One</label>
-        <input type="radio" id="option1" name="option1" value="option1">
-        <label for="option1">Option One</label>
-        <input type="radio" id="option1" name="option1" value="option1">
-        <label for="option1">Option One</label>
-        <input type="radio" id="option1" name="option1" value="option1">
-        <br><br>
-        
-    </fieldset>
-
-    <!--Check box question-->
-    <fieldset>
-        <legend>Who were the creators of JSON</legend>
-        <label for="fredmuffintop">Fred Muffintop</label>
-        <input type="checkbox" id="fredmuffintop" name="jsoncreator" value="Fred Muffintop">
-        <br>
-        <label for="chipmorningstar">Chip Morningstar</label>
-        <input type="checkbox" id="chipmorningstar" name="jsoncreator" value="Chip Morningstar">
-        <br>
-        <label for="lucifermorningstar">Lucifer Morningstar</label>
-        <input type="checkbox" id="lucifermorningstar" name="jsoncreator" value="Lucifer Morningstar">
-        <br>
-        <label for="douglascrockford">Douglas Crockford</label>
-        <input type="checkbox" id="douglascrockford" name="jsoncreator" value="Douglas Crockford">
-        <br>
-        <label for="zachsummersby">Zach Summersby</label>
-        <input type="checkbox" id="douglascrockford" name="jsoncreator" value="Zach Summersby">
-        <br>
-        <label for="jimmyneutron">Jimmy Neutron</label>
-        <input type="checkbox" id="jimmyneutron" name="jsoncreator" value="Jimmy Neutron">
-        <br>
-    </fieldset>
-
-    <!--Drop down-->
-    <fieldset>
-        <label for="dropdownquest">Select an option.</label>
-        <select id="dropdownquest" name="dropdownquest">
-            <option value="dropOpt1"select></option>
-            <option value="dropOpt1"Option 1></option>
-            <option value="dropOpt2"Option 2></option>
-            <option value="dropOpt3"Option 3></option>
-        </select> 
-
-        <label for="date">Date</label>
-        <input type="datetime-local" id="date" name="date">
-    </fieldset>
     <footer>
-
         <!--Leave any references for your page as footnotes in the ordered list below
     Should use CSS to format the list as superscript numbers as well as adding them throughout the text
     This information is mostly only relevant to the topic page-->
