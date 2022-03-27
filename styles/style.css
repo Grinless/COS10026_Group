@@ -1,14 +1,38 @@
 *{font-family:sans-serif; color:#2F4F4F;}
-#intro{color:#525252; background-color:#f0f0f0;}
+#intro{color:#525252; background-color:#f0f0f0;padding:3px;}
 .reference{vertical-align:super;font-size:80%;}
-
-.index::before {
-    background-image: url("/styles/images/Wires.jpg");
+img.logo{width: 10%;}
+figcaption.logo{text-align:left;}
+header,nav{background-color:#ebebeb;}
+h1{font-family:consolas; font-size:300%;}
+nav{padding:10px;}
+nav a:hover{color:blue;}
+body.index {
+    background-image: url("images/wires.jpg");
     background-color: #cccccc;
-    background-size: cover;
-    opacity: 0.2;
+}
+
+th{background-color:darkgrey;}
+td{background-color:lightgrey;}
+
+aside{
+	float:right;
+	width:30%;
+	border:3px solid lightgrey;
 }
 
 footer{
-    font-style: italic
+    font-style: italic;
+	color: #f0f0f0;
+	background-color: #4a4a4a;
+	padding: 10px;
+	text-align:center;
+	width:100%;
+}
+
+footer ol{text-align:left;}
+
+footer *{
+	font-style: italic;
+	color: #f0f0f0;
 }
