@@ -7,19 +7,25 @@ description: [index.html, topic.html, quiz.html]
 */
 
 *{font-family:sans-serif; color:#2F4F4F;}
-#intro{color:#525252; background-color:#f0f0f0;padding:3px;}
 .reference{vertical-align:super;font-size:80%;}
+/*header formatting*/
+h1{font-family:consolas; font-size:300%;}
 img.logo{width: 10%;}
 figcaption.logo{text-align:left;}
-header,nav{background-color:#ebebeb;}
-h1{font-family:consolas; font-size:300%;}
+header{background-color:#ebebeb;}
 nav{padding:10px;}
 nav a:hover{color:blue;}
+
+h2, h3{font-family:consolas;}
+
+#intro{color:#525252; background-color:#f0f0f0;padding:3px;}
+
 body.index {
     background-image: url("images/wires.jpg");
     background-color: #cccccc;
 }
 
+/*table formatting*/
 th{background-color:darkgrey;}
 td{background-color:lightgrey;}
 
@@ -29,6 +35,7 @@ aside{
 	border:3px solid lightgrey;
 }
 
+/*footer formatting*/
 footer{
     font-style: italic;
 	color: #f0f0f0;
@@ -37,9 +44,7 @@ footer{
 	text-align:center;
 	width:100%;
 }
-
 footer ol{text-align:left;}
-
 footer *{
 	font-style: italic;
 	color: #f0f0f0;
