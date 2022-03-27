@@ -28,30 +28,30 @@
     <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
         <!-- Questions.-->
         <fieldset>
-            <label for="fname">First Name: </label> 
-            <input type ="text" id="fname" name="fname">
+            <label for="firstname"> First Name: </label> 
+            <input type ="text" id="firstname" name="firstname" required="required" pattern="^[a-zA-Z -]+$" maxlength ="30">
             <br>
-            <label for="lname">Last Name: </label>
-            <input type ="text" id="lname" name="lname">
+            <label for="lastname"> Last Name: </label>
+            <input type ="text" id="lastname" name="lastname" required="required" pattern="^[a-zA-Z -]+$" maxlength ="30">
             <br>
-            <label for="studentnum">Student Number: </label>
-            <input type ="text" id="studentnum" name="studentnum">
+            <label for="studentid"> Student Number: </label>
+            <input type ="text" id="studentid" name="studentid" required="required" pattern="^\d+$" maxlength="10" minlength="7">
         </fieldset>
 
         <fieldset>
             <legend> Student Information. </legend>
             <!--String question-->
-            <label for="jsonUseCase">What is your most probable use case for JSON:</label>
+            <label for="jsonusecase">What is your intended use case for JSON:</label>
             <br>
-            <input type="text" id="jsonUseCase" name="jsonUseCase"> 
+            <input type="text" id="jsonusecase" name="jsonusecase" required="required"> 
             <br>
         </fieldset>
 
-        <!--Radio buttons (What does JSON stand for?)-->
+        <!-- Radio buttons (What does JSON stand for?) -->
         <fieldset>
             <legend>What does JSON stand for</legend>
             <label for="jackstandsonned">Jack Stands On Ned: </label>
-            <input type="radio" id="jackstandsonned" name="acroselected" value="1"/> <br>
+            <input type="radio" id="jackstandsonned" name="acroselected" value="1" required="required"/> <br>
             <label for="jargonsysopnull">Jargon System Operation Nullifier: </label>
             <input type="radio" id="jargonsysopnull" name="acroselected" value="2">   <br>
             <label for="javasptObjNote"> JavaScript Object Notiation: </label>
@@ -63,7 +63,7 @@
         <fieldset>
             <legend>Who were the creators of JSON</legend>
             <label for="fredmuffintop">Fred Muffintop</label>
-            <input type="checkbox" id="fredmuffintop" name="jsoncreator" value="Fred Muffintop">
+            <input type="checkbox" id="fredmuffintop" name="jsoncreator" value="Fred Muffintop" checked="checked">
             <br> 
             <label for="chipmorningstar">Chip Morningstar</label>
             <input type="checkbox" id="chipmorningstar" name="jsoncreator" value="Chip Morningstar">
@@ -85,19 +85,24 @@
         <!--Drop down-->
         <fieldset>
             <legend>Is JSON Object Orientated?</legend>
-            <label for="dropdownquest">Select an option.</label>
-                <select id="dropdownquest" name="dropdownquest">
-                    <option value="dropOpt1">Please select an option.</option>
-                    <option value="dropOpt1">JSON is object orientated. </option>
-                    <option value="dropOpt2">JSON is not object orientated. </option>
+            <label for="jasonOO">Select an option.</label>
+                <select id="jasonOO" name="jasonOO">
+                    <option value="jasonOO1"> </option>
+                    <option value="jasonOO2">JSON is object orientated. </option>
+                    <option value="jasonOO3">JSON is not object orientated. </option>
+                    <option value="jasonOO4">Jason is a person. </option>
+                    <option value="jasonOO5">JASONNNNNN....... </option>
                 </select> 
         </fieldset>
 
         <fieldset>
             <legend>Date and time of quiz submission</legend>
-            <label for="datetimeSubmission">Date</label>
-            <input type="datetime-local" id="datetimeSubmission" name="datetimeSubmission">
+            <label for="datetimesubmission">Date</label>
+            <input type="datetime-local" id="datetimesubmission" name="datetimesubmission">
         </fieldset>
+
+        <input type= "submit" value="Register"/>
+	    <input type= "reset" value="Reset Form"/>
     </form>
     
     <footer>
