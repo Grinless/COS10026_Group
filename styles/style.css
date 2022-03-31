@@ -10,8 +10,22 @@ description: [index.html, topic.html, quiz.html]
 .reference{vertical-align:super;font-size:80%;}
 /*header formatting*/
 h1{font-family:consolas; font-size:300%;}
-img.logo{width: 152px;}
-figcaption.logo{text-align:left;}
+img.logo{
+	width: 80px;
+	float: right;
+	position: relative;
+	size: 20%;
+	top: -75px;
+}
+
+figcaption.logo{
+	text-align:left;
+	float: right;
+	position: relative;
+	top: +15px;
+	left: +110px; 
+}
+
 header{background-color:#ebebeb;}
 nav{padding:10px;}
 nav a:hover{color:blue;}
