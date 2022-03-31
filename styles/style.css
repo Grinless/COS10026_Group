@@ -25,15 +25,17 @@ body.index {
     background-color: #cccccc;
 }
 
-/*table formatting*/
-th{background-color:darkgrey;}
-td{background-color:lightgrey;}
-
 aside{
 	float:right;
 	width:30%;
 	border:3px solid lightgrey;
+	padding: 2px;
+	font-size:90%;
 }
+
+/*table formatting*/
+th{background-color:darkgrey;}
+td{background-color:lightgrey;}
 
 /*footer formatting*/
 footer{
