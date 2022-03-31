@@ -33,11 +33,6 @@ aside{
 	font-size:90%;
 }
 
-#graph{
-	width:100%;
-	min-width:500px;
-	}
-
 /*table formatting*/
 th{background-color:darkgrey;}
 td{background-color:lightgrey;}
