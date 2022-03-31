@@ -30,7 +30,8 @@ img.logo{
 	float: right;
 	position: relative;
 	size: 20%;
-	top: -75px;
+	top: -95px;
+	left: -15px;
 }
 
 /**/
@@ -38,8 +39,8 @@ figcaption.logo{
 	text-align:left;
 	float: right;
 	position: relative;
-	top: +15px;
-	left: +110px; 
+	top: 0px;
+	left: +100px; 
 }
 
 /**/
@@ -47,10 +48,6 @@ header{
 	background-color:#ebebeb;
 	border: #2F4F4F solid 2px;
 	outline-color: darkgray;
-}
-
-header.h1{
-	
 }
 
 /**/
