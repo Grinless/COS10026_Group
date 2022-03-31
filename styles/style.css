@@ -10,7 +10,7 @@ description: [index.html, topic.html, quiz.html]
 .reference{vertical-align:super;font-size:80%;}
 /*header formatting*/
 h1{font-family:consolas; font-size:300%;}
-img.logo{width: 10%;}
+img.logo{width: 152px;}
 figcaption.logo{text-align:left;}
 header{background-color:#ebebeb;}
 nav{padding:10px;}
@@ -32,6 +32,11 @@ aside{
 	padding: 2px;
 	font-size:90%;
 }
+
+#graph{
+	width:100%;
+	min-width:500px;
+	}
 
 /*table formatting*/
 th{background-color:darkgrey;}
