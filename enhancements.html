@@ -33,9 +33,34 @@
 
             <h2>Current enhancements on website.</h1>
             <ol>
-			<li><p> Added page resizing for device compatability. </p></li>
-		<li><p> Added tab icon </p></li>
-		<li><p> Added custom CSS selector to right align JSON logo figure element </p></li> 
+		    <li><p> Added tab icon 
+			    <ul>
+				    <li>This makes new use of the rel attribute to use a .ico file for the tab icon, creating a more unified appearance of the website.</li>
+				    <li>Code used: &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;images/favicon.ico&quot;&gt;</li>
+				    <li>No hyperlink needed, visible everywhere</li></ul>
+		    </p></li>
+		<li><p> Added custom CSS selector to right align JSON logo figure element 
+			<ul>
+				<li>Use of various css properties to set the image and figcaption to the right of the header, creating a cleaner and more appealing visual</li>
+				<li>code used: img.logo{ <br> 
+					width: 80px; <br>
+					float: right; <br>
+					position: relative; <br>
+					size: 20%; <br>
+					top: -95px; <br>
+					left: -15px; <br>
+					} <br>
+					<br>
+					figcaption.logo{ <br>
+					text-align:left; <br>
+					float: right; <br>
+					position: relative; <br>
+					top: 0px; <br>
+					left: +100px; <br>
+					}</li>
+				<li>Visible on all pages, header introduced on <a href="index.html">home page</a></li>
+			</ul>
+			</p></li> 
 		    <!--<li><p> Added text compression on mercury server</p></li> Reserved space for potential enhancements-->
             </ol>
     
