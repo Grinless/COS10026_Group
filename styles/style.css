@@ -96,7 +96,7 @@ td{
 	background-color:lightgrey;
 }
 
-ol ol{list-style-type:circle;}
+ol ul{list-style-type:circle;}
 
 /*footer formatting*/
 footer{
