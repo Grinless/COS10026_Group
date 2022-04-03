@@ -69,13 +69,14 @@ h2, h3{
 #intro{
 	color:#525252; 
 	background-color:#f0f0f0;
-	padding:3px;
+	padding:5px;
 }
 
 /**/
 body.index {
     background-image: url("images/wires.jpg");
     background-color: #cccccc;
+    background-size: cover;
 }
 
 /**/
