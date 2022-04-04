@@ -124,9 +124,39 @@ footer *{
 	font-style: italic;
 	color: #f0f0f0;
 }
-/*Styles the code samples on the enhancement page.*/
-pre {
+
+/*Styles the code lines on the enhancement page.*/
+p.line {
 	border: #2F4F4F solid 2px;
-	background-color:lightgray;
-	width: 30em;
+	background-color:black;
+	color: white;
+	width: 40em;
+	font-family: monospace;
+}
+
+/*Styles the code blocks on the enhancement page.*/
+p.block {
+	border: #2F4F4F solid 2px;
+	background-color: black;
+	color: white;
+	width: 20em;
+	height: 12em;
+	font-family: monospace;
+	text-align: left;
+	text-indent: 10px;
+}
+
+/*Styles change log on the enhancement page.*/
+#elist{
+	color:darkblue;
+}
+
+/*Styles change log headers on the enhancement page.*/
+#elisthead{
+	text-decoration:underline;
+}
+
+/*Styles body on the enhancement page.*/
+body.enhancements {
+	background-color: #b0b0b0;
 }
