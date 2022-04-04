@@ -193,10 +193,12 @@ section.topicterms2 {
 	margin: .5em 1px 2px 2px;
 }
 
+/* Used to generated the background color of the quizz. */
 body.quiz{
 	background-color: darkgrey;
 }
 
+/* Set up the fieldsets for the quizz page. */
 fieldset.quiz {
 	background-color: white;
 	border: black solid 2px;
@@ -205,25 +207,30 @@ fieldset.quiz {
 	box-shadow: grey 10px 10px 10px;
 }
 
+/* Style for quiz legend.*/
 legend.quiz {
 	background-color: lightgrey;
 	border: darkgrey solid 2px;
 }
 
+/* Style for labels and their position.*/
 label.quiz {
 	font-weight: 600;
 	margin: .5em 1em 1.5em 1em;
 }
 
+/* Style for placing inputs in the quiz. */
 input.quiz{
 	margin: .5em 1em 0em 1em;
 }
 
+/* Style for the quiz submission button. */
 input.submit{
 	position:absolute;
 	right: 30%;
 }
 
+/* Style for the quiz reset form button. */
 input.reset {
 	position: absolute;
 	right: 40%;
