@@ -3,7 +3,7 @@ filename: [lab04.css]
 author: [Luke Batchelor, Cat Ater]
 created: [27/03/2022]
 last modified: [27/03/2022]
-description: [index.html, topic.html, quiz.html]
+description: [index.html, topic.html, quiz.html, enhancments.html]
 */
 
 /*Global deines for text styles */
@@ -74,8 +74,8 @@ h2, h3{
 
 /**/
 body.index {
-    background-image: url("images/wires.jpg");
-    background-color: #cccccc;
+    background-image: url("images/wires.png");
+    background-color: black;
     background-size: cover;
 }
 
@@ -115,6 +115,11 @@ footer{
 	align-self:center;
 	left:-8px;
 	bottom:-7px;
+}
+
+footer.index {
+	position: absolute;
+	bottom: 0px;
 }
 
 /*Align the footer text.*/
@@ -234,4 +239,12 @@ input.submit{
 input.reset {
 	position: absolute;
 	right: 40%;
+}
+
+/* Style for enhancement page sections*/
+section.enhancements {
+	background-color: lightgray;
+	padding: 1em .5em 1em 1em;
+	margin: 1em 1em 1em 1em;
+	border: black solid 2px;
 }
