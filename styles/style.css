@@ -101,12 +101,16 @@ ol ul{list-style-type:circle;}
 
 /*footer formatting*/
 footer{
-    font-style: italic;
+    	font-style: italic;
 	color: #f0f0f0;
 	background-color: #4a4a4a;
 	padding: 10px;
 	text-align:center;
 	width:100%;
+	position:relative;
+	width:100%;
+	align-self:center;
+	left:-8px;
 }
 
 /*Align the footer text.*/
