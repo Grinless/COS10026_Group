@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="styles/style.css"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-<body>
+<body class="quiz">
     <!--Header START.-->
     <header>
         <!-- Navigation bar and title-->
@@ -30,63 +30,62 @@
     <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
         <!-- Questions.-->
         <!--Student information area.-->
-        <fieldset>
-            <legend> Student Information. </legend>
-            <label for="firstname"> First Name: &emsp;&emsp;</label>
-            <input type="text" id="firstname" name="firstname" required="required" pattern="^[a-zA-Z -]+$" maxlength="30">
+        <fieldset class="quiz">
+            <legend class="quiz"> Student Information. </legend>
+            <label class="quiz" for="firstname"> First Name: &emsp;&emsp;</label>
+            <input class="quiz" type="text" id="firstname" name="firstname" required="required" pattern="^[a-zA-Z -]+$" maxlength="30">
             <br />
-            <label for="lastname"> Last Name: &emsp;&emsp;</label>
-            <input type="text" id="lastname" name="lastname" required="required" pattern="^[a-zA-Z -]+$" maxlength="30">
+            <label class="quiz" for="lastname"> Last Name: &emsp;&emsp;</label>
+            <input class="quiz" type="text" id="lastname" name="lastname" required="required" pattern="^[a-zA-Z -]+$" maxlength="30">
             <br />
-            <label for="studentid"> Student Number: </label>
-            <input type="text" id="studentid" name="studentid" required="required" pattern="^\d+$" maxlength="10" minlength="7">
+            <label class="quiz" for="studentid"> Student Number: </label>
+            <input class="quiz" type="text" id="studentid" name="studentid" required="required" pattern="^\d+$" maxlength="10" minlength="7">
             <br />
             <br />
-            <label for="jsonusecase">What is your intended use case for JSON:</label>
-            <br />
-            <input type="text" id="jsonusecase" name="jsonusecase" required="required">
+            <label class="quiz" for="jsonusecase">What is your intended use case for JSON:</label>
+            <input class="quiz" type="text" id="jsonusecase" name="jsonusecase" required="required">
             <br />
         </fieldset>
 
         <!-- Radio buttons (What does JSON stand for?) -->
-        <fieldset>
-            <legend>What does JSON stand for</legend>
-            <label for="jackstandsonned">Jack Stands On Ned: </label>
-            <input type="radio" id="jackstandsonned" name="acroselected" value="1" required="required" /> <br>
-            <label for="jargonsysopnull">Jargon System Operation Nullifier: </label>
-            <input type="radio" id="jargonsysopnull" name="acroselected" value="2">   <br>
-            <label for="javasptObjNote"> JavaScript Object Notiation: </label>
-            <input type="radio" id="javasptObjNote" name="acroselected" value="3">
+        <fieldset class="quiz">
+            <legend class="quiz">What does JSON stand for</legend>
+            <label class="quiz" for="jackstandsonned">Jack Stands On Ned: </label>
+            <input class="quiz" type="radio" id="jackstandsonned" name="acroselected" value="1" required="required" /> <br>
+            <label class="quiz" for="jargonsysopnull">Jargon System Operation Nullifier: </label>
+            <input class="quiz" type="radio" id="jargonsysopnull" name="acroselected" value="2">   <br>
+            <label class="quiz" for="javasptObjNote"> JavaScript Object Notiation: </label>
+            <input class="quiz" type="radio" id="javasptObjNote" name="acroselected" value="3">
             <br>
         </fieldset>
 
         <!--Check box question-->
-        <fieldset>
-            <legend>Who were the creators of JSON</legend>
-            <label for="fredmuffintop">Fred Muffintop</label>
-            <input type="checkbox" id="fredmuffintop" name="jsoncreator" value="Fred Muffintop" checked="checked">
+        <fieldset class="quiz">
+            <legend class="quiz">Who were the creators of JSON</legend>
+            <label class="quiz" for="fredmuffintop">Fred Muffintop</label>
+            <input class="quiz" type="checkbox" id="fredmuffintop" name="jsoncreator" value="Fred Muffintop" checked="checked">
             <br>
-            <label for="chipmorningstar">Chip Morningstar</label>
-            <input type="checkbox" id="chipmorningstar" name="jsoncreator" value="Chip Morningstar">
+            <label class="quiz" for="chipmorningstar">Chip Morningstar</label>
+            <input class="quiz" type="checkbox" id="chipmorningstar" name="jsoncreator" value="Chip Morningstar">
             <br>
-            <label for="lucifermorningstar">Lucifer Morningstar</label>
-            <input type="checkbox" id="lucifermorningstar" name="jsoncreator" value="Lucifer Morningstar">
+            <label class="quiz" for="lucifermorningstar">Lucifer Morningstar</label>
+            <input class="quiz" type="checkbox" id="lucifermorningstar" name="jsoncreator" value="Lucifer Morningstar">
             <br>
-            <label for="douglascrockford">Douglas Crockford</label>
-            <input type="checkbox" id="douglascrockford" name="jsoncreator" value="Douglas Crockford">
+            <label class="quiz" for="douglascrockford">Douglas Crockford</label>
+            <input class="quiz" type="checkbox" id="douglascrockford" name="jsoncreator" value="Douglas Crockford">
             <br>
-            <label for="zachsummersby">Zach Summersby</label>
-            <input type="checkbox" id="zachsummersby" name="jsoncreator" value="Zach Summersby">
+            <label class="quiz" for="zachsummersby">Zach Summersby</label>
+            <input class="quiz" type="checkbox" id="zachsummersby" name="jsoncreator" value="Zach Summersby">
             <br>
-            <label for="jimmyneutron">Jimmy Neutron</label>
-            <input type="checkbox" id="jimmyneutron" name="jsoncreator" value="Jimmy Neutron">
+            <label class="quiz" for="jimmyneutron">Jimmy Neutron</label>
+            <input class="quiz" type="checkbox" id="jimmyneutron" name="jsoncreator" value="Jimmy Neutron">
             <br>
         </fieldset>
 
         <!--Drop down-->
-        <fieldset>
-            <legend>Is JSON Object Orientated?</legend>
-            <label for="jasonOO">Select an option.</label>
+        <fieldset class="quiz">
+            <legend class="quiz">Is JSON Object Orientated?</legend>
+            <label class="quiz" for="jasonOO">Select an option.</label>
             <select id="jasonOO" name="jasonOO" required="required">
                 <option value=""> </option>
                 <option value="jasonOO1">JSON is object orientated. </option>
@@ -96,14 +95,18 @@
             </select>
         </fieldset>
 
-        <fieldset>
-            <legend>Date and time of quiz submission</legend>
-            <label for="datetimesubmission">Date</label>
+        <!--Date time.-->
+        <fieldset class="quiz">
+            <legend class="quiz">Date and time of quiz submission</legend>
+            <label class="quiz" for="datetimesubmission">Date</label>
             <input type="datetime-local" id="datetimesubmission" name="datetimesubmission">
         </fieldset>
+        <br/>
+        <br/>
 
-        <input type="submit" value="Register" />
-        <input type="reset" value="Reset Form" />
+        <!--Submission/Reset buttons.-->
+        <input class="submit" type="submit" value="Submit Form" />
+        <input class="reset" type="reset" value="Reset Form" />
     </form>
     <br>
     <!--Footer and references. START.-->

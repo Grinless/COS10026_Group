@@ -97,7 +97,10 @@ td{
 	background-color:lightgrey;
 }
 
-ol ul{list-style-type:circle;}
+ol ul{
+	list-style-type:circle;
+
+}
 
 /*footer formatting*/
 footer{
@@ -159,4 +162,69 @@ p.block {
 /*Styles body on the enhancement page.*/
 body.enhancements {
 	background-color: #b0b0b0;
+}
+
+/*Used to create index content box.*/
+section.content {
+	border: #2F4F4F solid 2px;
+	background-color: white;
+	height: 80px; 
+	text-align: center;
+	box-shadow: 10px 10px 10px black;	
+}
+
+/*Used to create topic content box.*/
+section.topicterms {
+	border: white solid 2px;
+	background-color: white;
+	height: 30%;
+	text-align: left;
+	inset: 25px;
+	margin: 1em 1px 2px 2px;
+}
+
+/*Used to create topic content box.*/
+section.topicterms2 {
+	border: white solid 2px;
+	background-color: white;
+	height: 30%;
+	text-align: left;
+	inset: 25px;
+	margin: .5em 1px 2px 2px;
+}
+
+body.quiz{
+	background-color: darkgrey;
+}
+
+fieldset.quiz {
+	background-color: white;
+	border: black solid 2px;
+	width: 40em;
+	margin: 1.5em .5em .5em .5em;
+	box-shadow: grey 10px 10px 10px;
+}
+
+legend.quiz {
+	background-color: lightgrey;
+	border: darkgrey solid 2px;
+}
+
+label.quiz {
+	font-weight: 600;
+	margin: .5em 1em 1.5em 1em;
+}
+
+input.quiz{
+	margin: .5em 1em 0em 1em;
+}
+
+input.submit{
+	position:absolute;
+	right: 30%;
+}
+
+input.reset {
+	position: absolute;
+	right: 40%;
 }
