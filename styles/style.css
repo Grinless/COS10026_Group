@@ -102,36 +102,6 @@ ol ul{
 
 }
 
-/*footer formatting*/
-footer{
-    font-style: italic;
-	color: #f0f0f0;
-	background-color: #4a4a4a;
-	padding: 10px;
-	text-align:center;
-	width:100%;
-	position:relative;
-	width:100%;
-	align-self:center;
-	left:-8px;
-	bottom:-7px;
-}
-
-footer.index {
-	position: absolute;
-	bottom: 0px;
-}
-
-/*Align the footer text.*/
-footer ol{
-	text-align:left;
-}
-
-/*Style the text elements present within the footer.*/
-footer *{
-	font-style: italic;
-	color: #f0f0f0;
-}
 
 /*Styles the code lines on the enhancement page.*/
 p.line {
@@ -169,6 +139,12 @@ body.enhancements {
 	background-color: #b0b0b0;
 }
 
+/*Styles body(background) color on topic page*/
+body.topic {
+	background-color: #b0b0b0;
+}
+
+
 /*Used to create index content box.*/
 section.content {
 	border: #2F4F4F solid 2px;
@@ -198,6 +174,22 @@ section.topicterms2 {
 	margin: .5em 1px 2px 2px;
 }
 
+/* Style for enhancement page sections*/
+section.enhancements {
+	background-color: lightgray;
+	padding: 1em .5em 1em 1em;
+	margin: 1em 1em 1em 1em;
+	border: black solid 2px;
+}
+
+/*Style for topic page section*/
+section.topic {
+	background-color:white;
+	padding: 1em .5em 1em 1em;
+	margin: 1em 1em 1em 1em;
+	border: black solid 2px;
+}
+
 /* Used to generated the background color of the quizz. */
 body.quiz{
 	background-color: darkgrey;
@@ -224,6 +216,12 @@ label.quiz {
 	margin: .5em 1em 1.5em 1em;
 }
 
+/*graph adaptive resizing*/
+#graph{
+	max-width:568px;
+	width:100%;
+}
+
 /* Style for placing inputs in the quiz. */
 input.quiz{
 	margin: .5em 1em 0em 1em;
@@ -231,20 +229,46 @@ input.quiz{
 
 /* Style for the quiz submission button. */
 input.submit{
-	position:absolute;
-	right: 30%;
+	margin:5px;
+	font-weight:bold;
+	width:10%;
+	min-width:99px;
+	height:36px;
 }
 
 /* Style for the quiz reset form button. */
 input.reset {
-	position: absolute;
-	right: 40%;
+	width:10%;
+	min-width:99px;
+	height:36px;
 }
 
-/* Style for enhancement page sections*/
-section.enhancements {
-	background-color: lightgray;
-	padding: 1em .5em 1em 1em;
-	margin: 1em 1em 1em 1em;
-	border: black solid 2px;
+
+/*footer formatting*/
+footer{
+    font-style: italic;
+	color: #f0f0f0;
+	background-color: #4a4a4a;
+	padding: 10px;
+	text-align:center;
+	width:100%;
+	align-self:center;
+	left:-8px;
+	bottom:-7px;
+}
+
+footer.index {
+	position: absolute;
+	bottom: 0px;
+}
+
+/*Align the footer text.*/
+footer ol{
+	text-align:left;
+}
+
+/*Style the text elements present within the footer.*/
+footer *{
+	font-style: italic;
+	color: #f0f0f0;
 }
