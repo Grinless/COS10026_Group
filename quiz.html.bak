@@ -16,7 +16,7 @@
         <h1> {JSON} </h1>
         <figure>
             <a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
-            <figcaption class="logo">Click to go to json.org</figcaption>
+            <a href="https://json.org"> <figcaption class="logo">Click to go to json.org</figcaption>
         </figure>
         <nav>
             <a href="index.html">Home</a>|
@@ -62,23 +62,29 @@
         <!--Check box question-->
         <fieldset class="quiz">
             <legend class="quiz">Who were the creators of JSON</legend>
-            <label class="quiz" for="fredmuffintop">Fred Muffintop</label>
             <input class="quiz" type="checkbox" id="fredmuffintop" name="jsoncreator" value="Fred Muffintop">
+			<label class="quiz" for="fredmuffintop">Fred Muffintop</label>
+
             <br>
+			<input class="quiz" type="checkbox" id="chipmorningstar" name="jsoncreator" value="Chip Morningstar">
             <label class="quiz" for="chipmorningstar">Chip Morningstar</label>
-            <input class="quiz" type="checkbox" id="chipmorningstar" name="jsoncreator" value="Chip Morningstar">
+            
             <br>
+			<input class="quiz" type="checkbox" id="lucifermorningstar" name="jsoncreator" value="Lucifer Morningstar">
             <label class="quiz" for="lucifermorningstar">Lucifer Morningstar</label>
-            <input class="quiz" type="checkbox" id="lucifermorningstar" name="jsoncreator" value="Lucifer Morningstar">
+            
             <br>
+			<input class="quiz" type="checkbox" id="douglascrockford" name="jsoncreator" value="Douglas Crockford">
             <label class="quiz" for="douglascrockford">Douglas Crockford</label>
-            <input class="quiz" type="checkbox" id="douglascrockford" name="jsoncreator" value="Douglas Crockford">
+            
             <br>
+			<input class="quiz" type="checkbox" id="zachsummersby" name="jsoncreator" value="Zach Summersby">
             <label class="quiz" for="zachsummersby">Zach Summersby</label>
-            <input class="quiz" type="checkbox" id="zachsummersby" name="jsoncreator" value="Zach Summersby">
+            
             <br>
+			<input class="quiz" type="checkbox" id="jimmyneutron" name="jsoncreator" value="Jimmy Neutron">
             <label class="quiz" for="jimmyneutron">Jimmy Neutron</label>
-            <input class="quiz" type="checkbox" id="jimmyneutron" name="jsoncreator" value="Jimmy Neutron">
+            
             <br>
         </fieldset>
 
