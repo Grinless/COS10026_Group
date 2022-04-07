@@ -113,11 +113,23 @@ p.line {
 }
 
 /*Styles the code blocks on the enhancement page.*/
-p.block {
+p.blocks {
 	border: #2F4F4F solid 2px;
 	background-color: black;
 	color: white;
 	width: 20em;
+	height: 12em;
+	font-family: monospace;
+	text-align: left;
+	text-indent: 10px;
+}
+
+/*Styles the code blocks on the enhancement page.*/
+p.blockm {
+	border: #2F4F4F solid 2px;
+	background-color: black;
+	color: white;
+	width: 30em;
 	height: 16em;
 	font-family: monospace;
 	text-align: left;
