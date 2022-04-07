@@ -118,7 +118,7 @@ p.block {
 	background-color: black;
 	color: white;
 	width: 20em;
-	height: 12em;
+	height: 16em;
 	font-family: monospace;
 	text-align: left;
 	text-indent: 10px;
@@ -152,6 +152,21 @@ section.content {
 	height: 80px; 
 	text-align: center;
 	box-shadow: 10px 10px 10px black;	
+}
+
+/*Used to create index content box.*/
+section.youtubecontent {
+	border: #2F4F4F solid 2px;
+	background-color: white;
+	height: 350px;
+	width: 700px;
+	position: relative;
+	margin: 10px 10px 10px 10px;
+	align-content:center;
+	text-align: center;
+	box-shadow: 10px 10px 10px black;
+	padding:20px 20px 10px 10px; 
+	left: +50px; 
 }
 
 /*Used to create topic content box.*/
