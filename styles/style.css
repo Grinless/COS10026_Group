@@ -24,12 +24,11 @@ h1{
 	font-size:300%;
 }
 
-/*Style aligning the logo image to top left of the screen*/
+/*Style aligning the logo image to top right of the screen*/
 img.logo{
 	width: 80px;
 	float: right;
 	position: relative;
-	width: -20%;
 	top: -95px;
 	left: -15px;
 }
@@ -137,12 +136,12 @@ p.blockm {
 }
 
 /*Styles change log on the enhancement page.*/
-#elist{
+.elist{
 	color:darkblue;
 }
 
 /*Styles change log headers on the enhancement page.*/
-#elisthead{
+.elisthead{
 	text-decoration:underline;
 }
 
@@ -180,6 +179,7 @@ section.youtubecontent {
 	padding:20px 20px 10px 10px; 
 	left: +50px; 
 }
+section.youtubecontent iframe{border-width:0px;}
 
 /*Used to create topic content box.*/
 section.topicterms {
