@@ -96,6 +96,7 @@ td{
 	background-color:lightgrey;
 }
 
+/*sub list formatting*/
 ol ul{
 	list-style-type:circle;
 
