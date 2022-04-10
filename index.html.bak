@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+0.<!DOCTYPE html>
 <html lang = "en">
 <head>
 <meta charset="utf-8"/>
@@ -16,13 +16,13 @@
         <h1> {JSON} </h1>
         <figure>
             <a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
-            <a href="https://json.org"> <figcaption class="logo">Click to go to json.org</figcaption>
+             <figcaption class="logo"><a href="https://json.org">Click to go to json.org</a></figcaption>
         </figure>
         <nav>
             <a href="index.html">Home</a>|
             <a href="topic.html">More info</a>|
             <a href="quiz.html">Quiz</a>|
-            <a href="enhancements">Enhancements</a>
+            <a href="enhancements.html">Enhancements</a>
         </nav>
     </header>
     <!--Header END.-->
@@ -36,9 +36,18 @@
         </span>
     </section>
     <br><br><br><br><br>
+    <section class="youtubecontent">
+        <iframe width="560" height="315" 
+			src="https://www.youtube.com/embed/quKLAFc_Khg" 
+			title="YouTube video player" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
+    </section>
+    <br><br><br><br><br>
     <!--Content. END.-->
     <!--Footer. START.-->
-    <footer class="index">
+    <footer>
         <!--Leave any references for your page as footnotes in the ordered list below
         Should use CSS to format the list as superscript numbers as well as adding them throughout the text
         This information is mostly only relevant to the topic page-->
