@@ -23,7 +23,7 @@
 			<a href="topic.html">More info</a>|
 			<a href="quiz.html">Quiz</a>|
 			<a href="enhancements.html">Enhancements</a>|
-			<a href="Management.php">Management</a>
+			<a href="Management.php">Management Login</a>
 		</nav>
 	</header>
 	
@@ -37,12 +37,9 @@
 			<label for="password">Password</label>
 			<input type="text" name="password" id="password" /><br />
 	</fieldset>
-<<<<<<< HEAD:Management.php
 	
 		<input class="login" type="login" value="Login" />
 		
 	</form>
 </body>
 </html>
-=======
->>>>>>> 31fcd233371cb4534954cb67b21312dc1cc02c8e:management.php
