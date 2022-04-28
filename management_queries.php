@@ -23,23 +23,6 @@
 			<a href="topic.html">More info</a>|
 			<a href="quiz.html">Quiz</a>|
 			<a href="enhancements.html">Enhancements</a>|
-			<a href="Management.php">Management</a>
+			<a href="Management.php">Management Login</a>
 		</nav>
 	</header>
-	
-	<h1>Admin Login</h1>
-	
-	<form id="loginform" method="post" action="management_queries.php">
-	<fieldset id="LoginID">
-		<legend>Login:</legend>
-			<label for="username">Username</label>
-			<input type="text" name="username" id="username" /><br />
-			<label for="password">Password</label>
-			<input type="text" name="password" id="password" /><br />
-	</fieldset>
-	
-		<input class="login" type="login" value="Login" />
-		
-	</form>
-</body>
-</html>
