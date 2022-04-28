@@ -2,9 +2,11 @@
 <html lang = "en">
 	<?php
 	include("header.inc");
-include ("menu.inc");
 ?>
 <body class="index">
+	<?php
+include ("menu.inc");
+?>
     <!--Content. START.-->
     <br><br><br><br>
     <section class="content">
