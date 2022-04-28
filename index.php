@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang = "en">
-<!--<head>
+<head>
 <meta charset="utf-8"/>
 <meta name="description" content="Landing page of JSON informatic website">
 <meta name="keywords" content="JSON, JavaScript Object Notation, HTML, CSS, Data interchange, Data Exhange">
@@ -8,14 +8,14 @@
 <title>JSON</title>
 <link rel="stylesheet" href="styles/style.css"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>-->
+</head>
 	<?php
 include ("header.inc")
 ?>
 <body class="index">
-    <!--Header START.-->
+    <!--Header START.
     <header>
-        <!-- Navigation bar and title-->
+        Navigation bar and title
         <h1> {JSON} </h1>
         <figure>
             <a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
@@ -29,7 +29,7 @@ include ("header.inc")
 			<a href="manage.php">Management Login</a>
         </nav>
     </header>
-    <!--Header END.-->
+    Header END.-->
     <!--Content. START.-->
     <br><br><br><br>
     <section class="content">
