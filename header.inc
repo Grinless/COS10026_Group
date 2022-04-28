@@ -1,9 +1,15 @@
-<head>
-<meta charset="utf-8"/>
-<meta name="description" content="Landing page of JSON informatic website">
-<meta name="keywords" content="JSON, JavaScript Object Notation, HTML, CSS, Data interchange, Data Exhange">
-<meta name="author" content="Error 404 Json not found">
-<title>JSON</title>
-<link rel="stylesheet" href="styles/style.css"/>
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
+<header>
+        Navigation bar and title
+        <h1> {JSON} </h1>
+        <figure>
+            <a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
+             <figcaption class="logo"><a href="https://json.org">Click to go to json.org</a></figcaption>
+        </figure>
+        <nav>
+            <a href="index.php">Home</a>|
+            <a href="topic.php">More info</a>|
+            <a href="quiz.php">Quiz</a>|
+            <a href="enhancements.html">Enhancements</a>|
+			<a href="manage.php">Management Login</a>
+        </nav>
+    </header>
