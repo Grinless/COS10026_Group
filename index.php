@@ -1,35 +1,10 @@
 <!DOCTYPE html>
 <html lang = "en">
-<head>
-<meta charset="utf-8"/>
-<meta name="description" content="Landing page of JSON informatic website">
-<meta name="keywords" content="JSON, JavaScript Object Notation, HTML, CSS, Data interchange, Data Exhange">
-<meta name="author" content="Error 404 Json not found">
-<title>JSON</title>
-<link rel="stylesheet" href="styles/style.css"/>
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
 	<?php
-include ("menu.inc")
+	include("header.inc");
+include ("menu.inc");
 ?>
 <body class="index">
-    <!--Header START.
-    <header>
-        Navigation bar and title
-        <h1> {JSON} </h1>
-        <figure>
-            <a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
-             <figcaption class="logo"><a href="https://json.org">Click to go to json.org</a></figcaption>
-        </figure>
-        <nav>
-            <a href="index.php">Home</a>|
-            <a href="topic.php">More info</a>|
-            <a href="quiz.php">Quiz</a>|
-            <a href="enhancements.html">Enhancements</a>|
-			<a href="manage.php">Management Login</a>
-        </nav>
-    </header>
-    Header END.-->
     <!--Content. START.-->
     <br><br><br><br>
     <section class="content">
@@ -61,14 +36,9 @@ include ("menu.inc")
             <li>Background image Credit: Wikimedia photo by WikiProfPC licensed under Creative Commons. To view the original image and license: <a href="https://commons.wikimedia.org/wiki/File:Fils_%C3%A9lectriques.JPG">https://commons.wikimedia.org/wiki/File:Fils_%C3%A9lectriques.JPG</a></li>
         </ol>
         <br>
-        <p>
-            Authors:
-            <a href="mailto:103865794@student.swin.edu.au">Nathan Hoorbakht,</a>
-            <a href="mailto:103993239@student.swin.edu.au">Luke Batchelor,</a>
-            <a href="mailto:103842975@student.swin.edu.au">Md Ahnaf Islam,</a>
-            <a href="mailto:103862724@student.swin.edu.au">Cat Ater, </a>
-            <a href="mailto:103951761@student.swin.edu.au">Jay Stephan,</a>
-        </p>
+       <?php
+	    include("footer.inc");
+	    ?>
     </footer>
     <!--Header END.-->
 </body>
