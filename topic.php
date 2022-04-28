@@ -1,32 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
 	<meta name="description" content="creating web applications" />
-	<meta name="keyword" content="HTML, CSS, JavaScrippt" />
-	<meta name="author" content="Error 404 JSON not found" />
-	<title> What is JSON? </title>
-	<link rel="stylesheet" href="styles/style.css"/>
-	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<?php
+	include('header.inc');
+?>
 </head>
 <body class="topic">
-	<!--Header start.-->
-	<header>
-		<!-- Navigation bar and title-->
-		<h1> {JSON} </h1>
-		<figure>
-			<a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
-			<figcaption class="logo"><a href="https://json.org">Click to go to json.org</a></figcaption>
-		</figure>
-		<nav>
-			<a href="index.php">Home</a>|
-			<a href="topic.php">More info</a>|
-			<a href="quiz.php">Quiz</a>|
-			<a href="enhancements.html">Enhancements</a>|
-			<a href="manage.php">Management Login</a>
-		</nav>
-	</header>
-	<!--Header End.-->
+	<?php
+	include('menu.inc');
+	?>
 <section class="topic">
 	<h2> JSON History </h2>
 	<h3>Who developed JSON</h3>
@@ -191,12 +174,9 @@
 			<li>JSON logo credit: Wikimedia photo by Douglas Crawford. To view the original image: <a href="https://commons.wikimedia.org/wiki/File:JSON_vector_logo.svg">https://commons.wikimedia.org/wiki/File:JSON_vector_logo.svg</a></li>
 		</ol>
 		<br>
-		Authors:
-		<a href="mailto:103865794@student.swin.edu.au">Nathan Hoorbakht,</a>
-		<a href="mailto:103993239@student.swin.edu.au">Luke Batchelor,</a>
-		<a href="mailto:103842975@student.swin.edu.au">Md Ahnaf Islam,</a>
-		<a href="mailto:103862724@student.swin.edu.au">Cat Ater, </a>
-		<a href="mailto:103951761@student.swin.edu.au">Jay Stephan,</a>
+		<?php
+include('footer.inc');
+	?>
 	</footer>
 	<!--Footer and references. END.-->
 </body>
