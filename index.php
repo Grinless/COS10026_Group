@@ -10,7 +10,7 @@
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 	<?php
-include ("header.inc")
+include ("menu.inc")
 ?>
 <body class="index">
     <!--Header START.
@@ -56,7 +56,7 @@ include ("header.inc")
         Should use CSS to format the list as superscript numbers as well as adding them throughout the text
         This information is mostly only relevant to the topic page-->
         <ol>
-            <li id="ref1">Bassett, L, Foley, M, Brown, K, Kwityn, J, Roumelioties, C, Troutman, E, Futato, D, Montgomery, K & Demarest, R 2015, Introduction to JavaScript object notation : a to-the-point guide to JSON, O'Reilly, Beijing.</li>
+            <li id="ref1">Bassett, L, Foley, M, Brown, K, Kwityn, J, Roumelioties, C, Troutman, E, Futato, D, Montgomery, K & Demarest, R 2015, Introduction to JavaScript object notation : a to-the-point guide to JSON, O'Reilly, Beijing.</li>
             <li>JSON logo credit: Wikimedia photo by Douglas Crawford. To view the original image: <a href="https://commons.wikimedia.org/wiki/File:JSON_vector_logo.svg">https://commons.wikimedia.org/wiki/File:JSON_vector_logo.svg</a></li>
             <li>Background image Credit: Wikimedia photo by WikiProfPC licensed under Creative Commons. To view the original image and license: <a href="https://commons.wikimedia.org/wiki/File:Fils_%C3%A9lectriques.JPG">https://commons.wikimedia.org/wiki/File:Fils_%C3%A9lectriques.JPG</a></li>
         </ol>
