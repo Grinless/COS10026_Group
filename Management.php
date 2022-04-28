@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<htmsl lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta name="description" content="List all user data" />
@@ -22,7 +22,7 @@
 			<a href="index.html">Home</a>|
 			<a href="topic.html">More info</a>|
 			<a href="quiz.html">Quiz</a>|
-			<a href="enhancements.html">Enhancements</a>
+			<a href="enhancements.html">Enhancements</a>|
 			<a href="Management.php">Management</a>
 		</nav>
 	</header>
@@ -36,3 +36,5 @@
 			<label for="password">Password</label>
 			<input type="text" name="password" id="password" /><br />
 	</fieldset>
+</body>
+</html>
