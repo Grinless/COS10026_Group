@@ -8,7 +8,7 @@
 </head>
 <body class="quiz">
 	<?php
-	include('menu.inc')
+	include('menu.inc');
 	?>
     <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
         <!-- Questions.-->
@@ -113,7 +113,7 @@
             </ol>
         <br>
         <?php
-include('footer.inc')
+include('footer.inc');
 ?>
     </footer>
     <!--Footer and references. END.-->
