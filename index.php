@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang = "en">
-<head>
+<!--<head>
 <meta charset="utf-8"/>
 <meta name="description" content="Landing page of JSON informatic website">
 <meta name="keywords" content="JSON, JavaScript Object Notation, HTML, CSS, Data interchange, Data Exhange">
@@ -8,7 +8,10 @@
 <title>JSON</title>
 <link rel="stylesheet" href="styles/style.css"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
+</head>-->
+	<?php
+include ("header.inc")
+?>
 <body class="index">
     <!--Header START.-->
     <header>
