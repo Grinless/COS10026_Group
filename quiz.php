@@ -19,11 +19,11 @@
             <figcaption class="logo"><a href="https://json.org">Click to go to json.org</a></figcaption>
         </figure>
         <nav>
-            <a href="index.html">Home</a>|
-            <a href="topic.html">More info</a>|
-            <a href="quiz.html">Quiz</a>|
+            <a href="index.php">Home</a>|
+            <a href="topic.php">More info</a>|
+            <a href="quiz.php">Quiz</a>|
             <a href="enhancements.html">Enhancements</a>|
-			<a href="Management.php">Management</a>
+			<a href="manage.php">Management Login</a>
         </nav>
     </header>
     <!--Header END.-->
