@@ -1,5 +1,5 @@
 <header>
-        Navigation bar and title
+        <!--Navigation bar and title-->
         <h1> {JSON} </h1>
         <figure>
             <a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
