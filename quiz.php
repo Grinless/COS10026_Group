@@ -1,33 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
 <meta name="description" content="JSON quiz"/>
-<meta name="keyword" content="HTML, CSS, JSON, data, markup"/>
-<meta name="author" content="Error 404 JSON not found"/>
-<title>JSON Quiz</title>
-<link rel="stylesheet" href="styles/style.css"/>
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<?php
+	include('header.inc');
+?>
 </head>
 <body class="quiz">
-    <!--Header START.-->
-    <header>
-        <!-- Navigation bar and title-->
-        <h1> {JSON} </h1>
-        <figure>
-            <a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
-            <figcaption class="logo"><a href="https://json.org">Click to go to json.org</a></figcaption>
-        </figure>
-        <nav>
-            <a href="index.php">Home</a>|
-            <a href="topic.php">More info</a>|
-            <a href="quiz.php">Quiz</a>|
-            <a href="enhancements.html">Enhancements</a>|
-			<a href="manage.php">Management Login</a>
-        </nav>
-    </header>
-    <!--Header END.-->
-
+	<?php
+	include('menu.inc')
+	?>
     <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
         <!-- Questions.-->
         <!--Student information area.-->
@@ -130,12 +112,9 @@
                 </li>
             </ol>
         <br>
-        Authors:
-        <a href="mailto:103865794@student.swin.edu.au">Nathan Hoorbakht,</a>
-        <a href="mailto:103993239@student.swin.edu.au">Luke Batchelor,</a>
-        <a href="mailto:103842975@student.swin.edu.au">Md Ahnaf Islam,</a>
-        <a href="mailto:103862724@student.swin.edu.au">Cat Ater, </a>
-        <a href="mailto:103951761@student.swin.edu.au">Jay Stephan,</a>
+        <?php
+include('footer.inc')
+?>
     </footer>
     <!--Footer and references. END.-->
 </body>
