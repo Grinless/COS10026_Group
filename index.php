@@ -22,7 +22,8 @@
             <a href="index.html">Home</a>|
             <a href="topic.html">More info</a>|
             <a href="quiz.html">Quiz</a>|
-            <a href="enhancements.html">Enhancements</a>
+            <a href="enhancements.html">Enhancements</a>|
+			<a href="Management.php">Management</a>
         </nav>
     </header>
     <!--Header END.-->
