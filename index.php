@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang = "en">
+	<head>
+		<meta name="description" content="Landing page of JSON informatic website">
 	<?php
 	include("header.inc");
 ?>
+		</head
 <body class="index">
 	<?php
 include ("menu.inc");
