@@ -182,38 +182,28 @@
                 return true;
             }
 
-            function form_grading(){
-                $acroselected_value = $_POST["acroselected"]; 
-                $jasonCreator_value = $_POST["jsoncreator"];
-                $jasonOO_value = $_POST["jasonOO"];
-                $acroselected_grade = 0; 
-                $jasonCreator_grade = 0;
-                $jasonOO_grade = 0;
-                $raw_grade;
-
-                if($acroselected_value == "3"){
-                    echo "<p> Score + 1: $acroselected_value. </p>";
-                    $acroselected_grade = 1; 
-                }
-
-                if($acroselected_value == "Chip Morningstar" 
-                    || $acroselected_value == "Douglas Crockford"){
-                    echo "<p> Score + 1: $jasonCreator_value. </p>";
-                    $jasonCreator_grade = 1; 
-                } 
-
-                if($jasonOO_value == "jasonOO1"){
-                    echo "<p> Score + 1: $jasonOO_value. </p>";
-                    $jasonOO_grade = 1; 
-                } 
-
-                $raw_grade = $acroselected_grade + $jasonCreator_grade + $jasonOO_grade;
-                echo "<p> Raw grade: $raw_grade. </p>";
+            function form_finalgrading($raw_grade){
+                if($raw_grade == 1)
+                    return "33%";
+                else if($raw_grade == 2)
+                    return "66%";
+                else if($raw_grade == 3)
+                    return "100%";
+                else 
+                    return "0%"; 
             }
         ?>
 
         <?php
             $form_valid = form_validation();
+            $acroselected_value = $_POST["acroselected"]; 
+            $jasonCreator_value = $_POST["jsoncreator"];
+            $jasonOO_value = $_POST["jasonOO"];
+            $acroselected_grade = 0; 
+            $jasonCreator_grade = 0;
+            $jasonOO_grade = 0;
+            $raw_grade;
+            $final_grade;
 
             if($form_valid){
                 echo "<p> Form data valid. </p>";
@@ -221,7 +211,21 @@
                 echo "<p> Form data invalid. </p>";
             }
 
-            form_grading();
+            if($acroselected_value == "3"){
+                $acroselected_grade = 1; 
+            }
+
+            if($jasonCreator_value == "Chip Morningstar" 
+                || $jasonCreator_value == "Douglas Crockford"){
+                $jasonCreator_grade = 1; 
+            } 
+
+            if($jasonOO_value == "jasonOO1"){
+                $jasonOO_grade = 1; 
+            } 
+
+            $raw_grade = $acroselected_grade + $jasonCreator_grade + $jasonOO_grade;
+            $final_grade = form_finalgrading($raw_grade);
         ?>
     </body>
 </html>
