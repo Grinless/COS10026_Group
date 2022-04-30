@@ -87,6 +87,7 @@
                 $acroselected_value; 
                 $datetime_value;
                 $jasonCreator_value;
+                $jasonOO_value;
                 $firstname_valid = false; 
                 $lastname_valid = false; 
                 $studentid_valid = false;
@@ -158,6 +159,13 @@
                 }
 
                 //Validate/sanitise jsonOO.
+                if(isset($_POST["jasonOO"])){
+                    $jasonOO_value = isset($_POST["jasonOO"]);
+                } else {
+                    return false;
+                }
+
+                
                 //Validate/sanitise selected date. 
                 if(isset($_POST["datetimesubmission"])){
                     $datetime_value = $_POST["datetimesubmission"];
@@ -173,6 +181,35 @@
 
                 return true;
             }
+
+            function form_grading(){
+                $acroselected_value = $_POST["acroselected"]; 
+                $jasonCreator_value = $_POST["jsoncreator"];
+                $jasonOO_value = $_POST["jasonOO"];
+                $acroselected_grade = 0; 
+                $jasonCreator_grade = 0;
+                $jasonOO_grade = 0;
+                $raw_grade;
+
+                if($acroselected_value == "3"){
+                    echo "<p> Score + 1: $acroselected_value. </p>";
+                    $acroselected_grade = 1; 
+                }
+
+                if($acroselected_value == "Chip Morningstar" 
+                    || $acroselected_value == "Douglas Crockford"){
+                    echo "<p> Score + 1: $jasonCreator_value. </p>";
+                    $jasonCreator_grade = 1; 
+                } 
+
+                if($jasonOO_value == "jasonOO1"){
+                    echo "<p> Score + 1: $jasonOO_value. </p>";
+                    $jasonOO_grade = 1; 
+                } 
+
+                $raw_grade = $acroselected_grade + $jasonCreator_grade + $jasonOO_grade;
+                echo "<p> Raw grade: $raw_grade. </p>";
+            }
         ?>
 
         <?php
@@ -183,6 +220,8 @@
             } else{
                 echo "<p> Form data invalid. </p>";
             }
+
+            form_grading();
         ?>
     </body>
 </html>
