@@ -47,7 +47,7 @@
 
         <!--Check box question-->
         <fieldset class="quiz">
-            <legend class="quiz">Who were the creators of JSON</legend>
+            <legend class="quiz">Who was a creator of JSON</legend>
             <input class="quiz" type="checkbox" id="fredmuffintop" name="jsoncreator" value="Fred Muffintop">
 			<label class="quiz" for="fredmuffintop">Fred Muffintop</label>
 

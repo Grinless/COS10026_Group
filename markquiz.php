@@ -14,7 +14,18 @@
                 return $data;
             }
 
-            function validate_string($string, $min_length, $max_length){
+            function validate_string($string){
+                $id_length = strlen($string);
+
+                if(is_null($string)){
+                    return false; 
+                }
+                else {
+                    return true;
+                }
+            }
+
+            function validate_string_bounded($string, $min_length, $max_length){
                 $id_length = strlen($string);
 
                 if(is_null($string)){
@@ -31,11 +42,6 @@
             ///Returns string[] in order (y-m-d).
             function retrive_date($datetime){
                 return explode("-", explode("T", $datetime)[0]);
-            }
-
-            ///Returns string[] in order (?-?-?)
-            function retrive_time($datetime){
-                return explode(":", explode("T", $datetime)[1]);
             }
 
             ///Validate the date exists and is well-formed.
@@ -70,64 +76,112 @@
                     return false;     
                 }
 
-                echo "<p> Current Date Valid: $current_date </p>";
+                return true;
+            }
+
+            function form_validation(){
+                $firstname_value;
+                $lastname_value;
+                $studentid_value;
+                $usecase_value; 
+                $acroselected_value; 
+                $datetime_value;
+                $jasonCreator_value;
+                $firstname_valid = false; 
+                $lastname_valid = false; 
+                $studentid_valid = false;
+                $usecase_valid = false;
+                $acroselected_valid = false;  
+                $datetime_valid = false; 
+                $jasonCreator_valid = false; 
+
+                //Validate/sanitise student first name. 
+                if(isset($_POST["firstname"])){
+                    $firstname_valid = validate_string_bounded($_POST["firstname"], 0, 30);
+                    if($firstname_valid)
+                        $firstname_value = sanitiseString($_POST["firstname"]); 
+                } else {
+                    echo "<p> Please fill out student first name field.";    
+                    return false;    
+                }
+
+                //Validate/sanitise student last name. 
+                if(isset($_POST["lastname"])){
+                    $lastname_valid = validate_string_bounded($_POST["lastname"], 0, 30);
+                    if($lastname_valid)
+                        $lastname_value = sanitiseString($_POST["lastname"]);
+                } else {
+                    echo "<p> Please fill out student last name field.";
+                    return false;        
+                }
+
+                //Validate/sanitise student ID. 
+                if(isset($_POST["studentid"])){
+                    $studentid_valid = validate_string_bounded($_POST["studentid"], 0, 30);
+                    if($studentid_valid){
+                        $studentid_value = sanitiseString($_POST["studentid"]);
+                    } else{
+                        echo "<p> Please enter valid string.</p>";    
+                    }
+                
+                } else {
+                    echo "<p> Please fill out student number field.";  
+                    return false;      
+                }
+
+                //Validate/sanitise use case. 
+                if(isset($_POST["jsonusecase"])){
+                    $usecase_valid = validate_string($_POST["jsonusecase"]);
+                    if($usecase_valid){
+                        $usecase_value = sanitiseString($_POST["jsonusecase"]);
+                    } else{
+                        echo "<p> Please enter valid usecase string.</p>"; 
+                    }
+                } else{
+                    echo "<p> Please enter usecase string."; 
+                    return false;
+                }
+
+                //Validate/sanitise acroselected.
+                if(isset($_POST["acroselected"])){
+                    $acroselected_value = $_POST["acroselected"];
+                } else{
+                    echo "<p> Please enter acronymn selection."; 
+                    return false; 
+                }
+
+                //Validate/sanitise jsoncreator. UPDATE THIS FURTHER.
+                if(isset($_POST["jsoncreator"])){
+                    $jasonCreator_value = sanitiseString($_POST["jsoncreator"]);
+                } else{ 
+                    return false; 
+                }
+
+                //Validate/sanitise jsonOO.
+                //Validate/sanitise selected date. 
+                if(isset($_POST["datetimesubmission"])){
+                    $datetime_value = $_POST["datetimesubmission"];
+                    $datetime_valid = validate_date($datetime_value);
+
+                    if(!$datetime_valid){
+                        echo "<p> Day Invalid.</p>";
+                        return false;
+                    } 
+                } else{
+                    return false; 
+                }
 
                 return true;
             }
         ?>
 
         <?php
-            $firstname_valid = false; 
-            $firstname_value = "";
-            $lastname_valid = false; 
-            $lastname_value = "";
-            $studentid_valid = false; 
-            $studentid_value = "";
-            $datetime_value; 
+            $form_valid = form_validation();
 
-            //Validate/sanitise student first name. 
-            if(isset($_POST["firstname"])){
-                $firstname_valid = validate_string($_POST["firstname"], 0, 30);
-                if($firstname_valid)
-                    $firstname_value = sanitiseString($_POST["firstname"]);
-                    echo "<p> Student first name: $firstname_value"; 
-            } else {
-                echo "<p> Please fill out student first name field.";       
-            }
-
-            //Validate/sanitise student last name. 
-            if(isset($_POST["lastname"])){
-                $lastname_valid = validate_string($_POST["lastname"], 0, 30);
-                if($lastname_valid)
-                    $lastname_value = sanitiseString($_POST["lastname"]);
-                    echo "<p> Student last name: $lastname_value"; 
-            } else {
-                echo "<p> Please fill out student last name field.";       
-            }
-
-            //Validate/sanitise student ID. 
-            if(isset($_POST["studentid"])){
-                $studentid_valid = validate_string($_POST["studentid"], 0, 30);
-                if($studentid_valid)
-                    $studentid_value = sanitiseString($_POST["studentid"]);
-                    echo "<p> Student ID: $studentid_value"; 
-            } else {
-                echo "<p> Please fill out student number field.";       
-            }
-
-            if(isset($_POST["datetimesubmission"])){
-                echo "<p> Date time set </p>";
-                $datetime_value = $_POST["datetimesubmission"];
-                $valid_date = validate_date($datetime_value);
-                $time_values = retrive_time($datetime_value);
-                echo "<p> Day: $datetime_value. </p>";
-
-                if($valid_date == true){
-                    echo "<p> Day Valid.</p>";
-                } else if($valid_date == false){
-                    echo "<p> Day Invalid.</p>";
-                }
-
+            if($form_valid){
+                echo "<p> Form data valid. </p>";
+            } else{
+                echo "<p> Form data invalid. </p>";
             }
         ?>
     </body>
