@@ -10,7 +10,7 @@
 	<?php
 	include('menu.inc');
 	?>
-    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+    <form method="post" action="markquiz.php">
         <!-- Questions.-->
         <!--Student information area.-->
         <fieldset class="quiz">
@@ -38,7 +38,7 @@
 			<label class="quiz" for="jackstandsonned">Jack Stands On Ned: </label><br>
             
             <input class="quiz" type="radio" id="jargonsysopnull" name="acroselected" value="2">
-			<label class="quiz" for="jargonsysopnull">Jargon System Operation Nullifier: </label>			<br>
+			<label class="quiz" for="jargonsysopnull">Jargon System Operation Nullifier: </label><br>
             
             <input class="quiz" type="radio" id="javasptObjNote" name="acroselected" value="3">
 			<label class="quiz" for="javasptObjNote"> JavaScript Object Notiation: </label>
