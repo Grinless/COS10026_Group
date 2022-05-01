@@ -3,7 +3,7 @@
 <head>
 <meta name="description" content="JSON quiz"/>
 <?php
-	include('header.inc');
+	require('header.inc');
 ?>
 </head>
 <body class="quiz">
