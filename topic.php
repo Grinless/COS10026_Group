@@ -3,7 +3,7 @@
 <head>
 	<meta name="description" content="creating web applications" />
 	<?php
-	include('header.inc');
+	require('header.inc');
 ?>
 </head>
 <body class="topic">
