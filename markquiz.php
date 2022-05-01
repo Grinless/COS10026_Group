@@ -4,8 +4,15 @@
         <title> Quiz Marking</title>
         <meta charset="utf-8">
         <meta name="description" content="Quiz marking PHP">
+        <?php
+            include("header.inc");
+        ?>
     </head>
     <body>
+        <?php
+        include ("menu.inc");
+        
+        ?>
         <?php
             //Object Class responsible for managing form data. 
             class FormData{
@@ -249,22 +256,61 @@
                     return $this->final_grade; 
                 }
             }
+
+            function CreateSucessPage($formdata, $numberOfAttempts){
+                $firstname = $formdata->firstname;
+                $lastname = $formdata->lastname;
+                $studentid = $formdata->studentid; 
+                $raw_grade = $formdata->GetRawGrade();
+                $final_grade = $formdata->GetFinalGrade();
+                echo "<h3>Congratulations on a successful submission.</h3>";
+                echo "<p> Submission details below: 
+                        <br> Username: $firstname $lastname ($studentid). 
+                        <br> Raw Grade: $raw_grade.
+                        <br> Final Grade: $final_grade.
+                        <br> Number of attempts: $numberOfAttempts.</p>";
+                if($numberOfAttempts == 1){
+                    echo "<p>Display link to another attempt here.</p>";
+                }
+            }
+
+            function Redirect($url, $permanant = false){
+                header('Location: ' . $url, true, $permanent ? 301 : 302);
+                exit();
+            }
         ?>
 
         <?php
             $formdata = new FormData();
             $raw_grade;
             $final_grade;
+            $numberOfAttempts = 2; 
 
             //If form is valid. 
             if($formdata->check_form_validity()){
                 $raw_grade = $formdata->GetRawGrade();
                 $final_grade = $formdata->GetFinalGrade();
-                echo "<p> User Raw Grade: $raw_grade </p>";
-                echo "<p> User Final Grade: $final_grade </p>"; 
+
+                //Do attempt query: 
+                if($numberOfAttempts < 2){
+                    //Update attempts. 
+                    $numberOfAttempts += 1; 
+                    //Add data to mysql. 
+                    CreateSucessPage($formdata, $numberOfAttempts);
+                } else{
+                    //Display failure to submit.
+                    Redirect('quizfail.php', false); 
+                }
+
             } else{
                 echo "<p> Form data invalid. </p>";
+                
             }
         ?>
+        <footer>
+            <?php
+                include("footer.inc");
+            ?>
+        </footer>
     </body>
 </html>
