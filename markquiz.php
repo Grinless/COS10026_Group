@@ -7,47 +7,65 @@
     </head>
     <body>
         <?php
+            //Object Class responsible for managing form data. 
             class FormData{
+                //Data from form. 
                 public $firstname;
-                public $firstname_valid = false;
                 public $lastname;
-                public $lastname_valid = false;
                 public $studentid; 
-                public $studentid_valid = false; 
                 public $usecase; 
-                public $usecase_valid = false; 
                 public $acroselected;
-                public $acroselected_valid = false;
                 public $jasoncreator;
-                public $jasoncreator_valid = false;
                 public $jasonOO;
-                public $jasonOO_valid = false; 
                 public $datetime;
-                public $datetime_valid = false; 
-                public $raw_grade = 0; 
-                public $final_grade; 
 
+                //Validity states for form data input.
+                public $firstname_valid = false;
+                public $lastname_valid = false;
+                public $studentid_valid = false; 
+                public $usecase_valid = false; 
+                public $acroselected_valid = false;
+                public $jasoncreator_valid = false;
+                public $jasonOO_valid = false; 
+                public $datetime_valid = false; 
+                
+                //Grade calculations. 
                 public $acroselected_grade = 0; 
                 public $jasoncreator_grade = 0;
                 public $jasonOO_grade = 0;
+                public $raw_grade = 0; 
+                public $final_grade; 
 
+                //Construct the FormData object. 
                 function __construct(){
                     //Validate/sanitise student first name. 
                     if(isset($_POST["firstname"])){
                         $this->firstname = $this->sanitiseString($_POST["firstname"]);
-                        $this->firstname_valid = $this->validate_string_bounded($this->firstname, 0, 30);  
+                        $check1 = $this->validate_string_bounded($this->firstname, 0, 30);
+                        $check2 = $this->validateAlphaHyphen($this->firstname);
+                        if($check1 && $check2){
+                            $this->firstname_valid = true;  
+                        }
                     }
 
                     //Validate/sanitise student last name. 
                     if(isset($_POST["lastname"])){
                         $this->lastname = $this->sanitiseString($_POST["lastname"]);
-                        $this->lastname_valid = $this->validate_string_bounded($this->lastname, 0, 30);
+                        $check1 = $this->validate_string_bounded($this->lastname, 0, 30);
+                        $check2 = $this->validateAlphaHyphen($this->lastname);
+                        if($check1 && $check2){
+                            $this->lastname_valid = true;  
+                        }
                     } 
 
                     //Validate/sanitise student ID. 
                     if(isset($_POST["studentid"])){
                         $this->studentid = $this->sanitiseString($_POST["studentid"]);
-                        $this->studentid_valid = $this->validate_string_bounded($this->studentid, 7, 10);             
+                        $check1 = $this->validate_string_bounded($this->studentid, 7, 10);
+                        $check2 = ctype_digit($this->studentid);
+                        if($check1 && $check2){
+                            $this->studentid_valid = true;             
+                        }
                     } 
 
                     //Validate/sanitise use case. 
@@ -81,6 +99,7 @@
                     } 
                 }
 
+                //Sanitise a string. 
                 function sanitiseString($data){
                     $data = trim($data);
                     $data = stripslashes($data);
@@ -88,9 +107,8 @@
                     return $data;
                 }
 
+                //Validate a string. 
                 function validate_string($string){
-                    $id_length = strlen($string);
-    
                     if(is_null($string)){
                         return false; 
                     }
@@ -99,6 +117,7 @@
                     }
                 }
 
+                //Validate a string with a min max length string. 
                 function validate_string_bounded($string, $min_length, $max_length){
                     if(strlen($string) < $min_length){
                         echo "<p> Returned false: string less than min bounds. </p>";
@@ -112,6 +131,13 @@
                     else {
                         return true;
                     }
+                }
+
+                function validateAlphaHyphen($data){
+                    if(preg_match('^[a-zA-Z -]^', $data)){
+                        return true; 
+                    }
+                    return false; 
                 }
 
                 ///Returns string[] in order (y-m-d).
@@ -154,6 +180,7 @@
                     return true;
                 }
 
+                //Get the form datas validity. 
                 function check_form_validity(){
                     if($this->firstname_valid == false){
                         echo "<p> Please fill out student first name field.";  
@@ -190,6 +217,7 @@
                     }
                 }
 
+                //Calculate the raw grade. 
                 function GetRawGrade(){
                     if($this->acroselected == "3"){
                         $this->acroselected_grade = 1; 
@@ -208,6 +236,7 @@
                     return $this->raw_grade; 
                 }
 
+                //Calculate the final grade. 
                 function GetFinalGrade(){
                     if($this->raw_grade == 1)
                         $this->final_grade = "33%";
