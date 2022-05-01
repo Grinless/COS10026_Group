@@ -3,7 +3,7 @@
 	<head>
 		<meta name="description" content="Landing page of JSON informatic website">
 	<?php
-	include("header.inc");
+	require("header.inc");
 ?>
 		</head
 <body class="index">
