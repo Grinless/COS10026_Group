@@ -29,11 +29,9 @@
 	
 	<h1>Admin Login</h1>
 	
-	<form id="loginform" method="post" action={
+	<form id="loginform" method="post" action="manage_queries.php">
 		
-	}
-	
-	>
+
 	<fieldset id="LoginID">
 		<legend>Login:</legend>
 			<label for="username">Username</label>
