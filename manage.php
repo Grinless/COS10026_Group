@@ -29,7 +29,11 @@
 	
 	<h1>Admin Login</h1>
 	
-	<form id="loginform" method="post" action="management_queries.php">
+	<form id="loginform" method="post" action={
+		
+	}
+	
+	>
 	<fieldset id="LoginID">
 		<legend>Login:</legend>
 			<label for="username">Username</label>
@@ -38,8 +42,15 @@
 			<input type="text" name="password" id="password" /><br />
 	</fieldset>
 	
-		<input class="login" type="login" value="Login" />
-		
+	<input class="submit" type="submit" value="Login" />
+	
+	
+<?php  // this will only action at the start of the form 
+	if username = "JsonNotFound" and password = "1234"
+		a = "manage_queries.php"
+	else
+		echo"<p>Please enter correct username and password</p>"
+?>
 	</form>
 </body>
 </html>
