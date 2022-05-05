@@ -5,7 +5,7 @@
 	<?php
 	require("header.inc");
 ?>
-		</head
+	</head>
 <body class="index">
 	<?php
 include ("menu.inc");
