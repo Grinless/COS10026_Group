@@ -28,13 +28,34 @@
 	</header>
 	
 	<h1> User Quiz Data </h1>
+	<br/>
+
+<form id="regform" method="post" onsubmit="return function Display(datatype)">
+	<label for="datatype">View Scores</label>
+	<select name="datatype" id="datatype">
+		<option value="">--- Select Data Set ---</option>
+		<option value="all">List all attempts</option>
+		<option value="specificstudent">List a specific student</option>  <!-- search student id -->
+		<option value="fullmarks">List all students who scored 100% on first attempt</option> <!-- id, first, last name-->
+		<option value="fail">List all attempts who scored under 50% on second attempt</option>
+		<option value="delete">Delete a student's attemps</option>
+		<option value="change">Change a student's score</option><!-- given st id and attempt number (so display attempts then select attempt) -->
+	</select>
+
+	<p><input type="submit" value="Search"/></p>
+</form>
+
+<?php
+	if (isset($_POST['datatype'])) {
+		print_data($_POST['datatype']);
+	}
+
+	function print_data($datatype) {
+		echo "<p>$datatype</p>";
+	}
+?>
 	
-	<input type="submit" value="List all attempts" />
-	<input type="submit" value="List specific student attemps" /> <!-- search student id -->
-	<input type="submit" value="List all students who scored 100% on first attempt" /> <!-- id, first, last name-->
-	<input type="submit" value="List all attempts who scored <50% on second attempt" />
-	<input type="submit" value="Delete a student's attemps" />	
-	<input type="submit" value="Change a student's score" /> <!-- given st id and attempt number (so display attempts then select attempt) -->
+
 	
 </body>
 </html>
