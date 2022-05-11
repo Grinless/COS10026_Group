@@ -3,13 +3,13 @@
 <head>
 	<meta name="description" content="List all user data" />
 	<?php
-	require("header.inc")
+	require("header.inc");
 	?>
 </head>
 <body class="Management">
 	<!--Header start.-->
 	<?php
-	include("menu.inc")
+	include("menu.inc");
 	?>
 	<h1>Admin Login</h1>
 	
@@ -36,7 +36,7 @@
 	</form>
 	<footer>
 		<?php
-		include("footer.inc")
+		include("footer.inc");
 		?>
 	</footer>
 </body>
