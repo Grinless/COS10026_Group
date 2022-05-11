@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<htmsl lang="en">
+<html lang="en">
 <head>
 	<meta name="description" content="List all user data" />
 	<?php require('header.inc')?>
