@@ -11,7 +11,7 @@
     <body>
         <?php
         include ("menu.inc");
-        
+        include ("validation.php");
         ?>
         <?php
             //Object Class responsible for managing form data. 
@@ -104,24 +104,6 @@
                         $this->datetime = $this->sanitiseString($_POST["datetimesubmission"]);
                         $this->datetime_valid = $this->validate_date($this->datetime);
                     } 
-                }
-
-                //Sanitise a string. 
-                function sanitiseString($data){
-                    $data = trim($data);
-                    $data = stripslashes($data);
-                    $data = htmlspecialchars($data);
-                    return $data;
-                }
-
-                //Validate a string. 
-                function validate_string($string){
-                    if(is_null($string)){
-                        return false; 
-                    }
-                    else {
-                        return true;
-                    }
                 }
 
                 //Validate a string with a min max length string. 
