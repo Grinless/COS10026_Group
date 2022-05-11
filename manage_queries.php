@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <htmsl lang="en">
 <head>
-	<meta charset="utf-8" />
 	<meta name="description" content="List all user data" />
-	<meta name="keyword" content="HTML, CSS, JavaScrippt" />
-	<meta name="author" content="Error 404 JSON not found" />
-	<title> Management </title>
-	<link rel="stylesheet" href="2.css"/>
-	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<?php require('header.inc')?>
 </head>
 <body class="Management">
 	<!--Header start.-->
