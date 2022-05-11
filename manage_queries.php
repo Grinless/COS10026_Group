@@ -8,18 +8,7 @@
 	<!--Header start.-->
 	<header>
 		<!-- Navigation bar and title-->
-		<h1> {JSON} </h1>
-		<figure>
-			<a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
-			<figcaption class="logo">Click to go to json.org</figcaption>
-		</figure>
-		<nav>
-			<a href="index.html">Home</a>|
-			<a href="topic.html">More info</a>|
-			<a href="quiz.html">Quiz</a>|
-			<a href="enhancements.html">Enhancements</a>|
-			<a href="Management.php">Management Login</a>
-		</nav>
+		<?php include('menu.inc') ?>
 	</header>
 	
 	<h1> User Quiz Data </h1>
