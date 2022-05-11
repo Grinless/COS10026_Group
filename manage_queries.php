@@ -6,12 +6,10 @@
 </head>
 <body class="Management">
 	<!--Header start.-->
-	<header>
 		<!-- Navigation bar and title-->
 		<?php include('menu.inc') ?>
-	</header>
 	
-	<h1> User Quiz Data </h1>
+	<h2> User Quiz Data </h2>
 	<br/>
 
 <form id="regform" method="post" onsubmit="return function Display(datatype)">
