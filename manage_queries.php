@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta name="description" content="List all user data" />
-	<?php require('header.inc')?>
+	<?php require('header.inc');?>
 </head>
 <body class="Management">
 	<!--Header start.-->
 		<!-- Navigation bar and title-->
-		<?php include('menu.inc') ?>
+		<?php include('menu.inc'); ?>
 	
 	<h2> User Quiz Data </h2>
 	<br/>
