@@ -33,7 +33,14 @@
 	}
 
 	function print_data($datatype) {
-		echo "<p>$datatype</p>";
+		if $datatype == "all"
+			//echo "<p>$datatype</p>";
+			
+		if $datatype == "specificstudent"
+		if $datatype == "fullmarks"
+		if $datatype == "fail"
+		if $datatype == "delete"
+		if $datatype == "change"
 	}
 ?>
 	
