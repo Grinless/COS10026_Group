@@ -12,10 +12,17 @@
 	include("menu.inc");
 	?>
 	<h1>Admin Login</h1>
-	
-	<form id="loginform" method="post" action="manage_queries.php">
-		
-
+	<?php
+	if (isset($_SESSION["attempts"])){
+		echo "<form id=\"loginform\" method=\"post\" action=\"manage_queries.php?".session_id(); echo "\">";
+	}else{
+		echo "<form id=\"loginform\" method=\"post\" action=\"manage_queries.php\">";
+	}
+	?>
+	<!--
+Above php replaces the following code, HAS NOT BEEN TESTED YET
+<form id="loginform" method="post" action="manage_queries.php">
+-->
 	<fieldset id="LoginID">
 		<legend>Login:</legend>
 			<label for="username">Username</label>
