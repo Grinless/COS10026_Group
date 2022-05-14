@@ -28,6 +28,35 @@
 </form>
 
 <?php
+	//connect to the dataabse
+	$host = "feenix-mariadb.swin.edu.au";
+	$user = "s103951761";
+	$pwd = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+	$sql_db = "s103951761_db";
+	
+	require_once ("settings.php"); 	//connection info
+
+	$conn = @mysqli_connect($host,
+			$user,
+			$pwd,
+			$db
+		);
+	//checks of connection is successful
+	if (!$conn) {
+		//displays an error message
+		echo "<p>Database connection failure</p>";
+	} else {
+		// upon successful completion
+		$sql_table = "Attempts";
+		
+		print_$datatype 
+		
+		}
+			
+		mysqli_close($conn);
+	}
+		
+	
 	if (isset($_POST['datatype'])) {
 		print_data($_POST['datatype']);
 	}
@@ -41,6 +70,37 @@
 		if $datatype == "fail"
 		if $datatype == "delete"
 		if $datatype == "change"
+	}
+	
+	
+	function print_all {
+		
+		//set up the SQL command to query or add data into the table
+		$query = "select Firstname, Lastname, StudentID, Date, Score, AttemptID FROM Attempts ORDER BY AttemptID";
+		
+		$results = mysqli_query($conn, $query);
+		
+		if(!$results) {
+			echo "<p>Something is wrong with ", $query, "</p>";
+		} else {
+			echo "<table border=\"1\">\n";
+			echo "<tr>\n "
+				."<th scope=\"col\">Make</th>\n "
+				."<th scope=\"col\">Model</th>\n "
+				."<th scope=\"col\">Price</th>\n "
+				."</th>\n ";
+				
+				
+			While ($row = mysqli_fetch_assoc($results)) {
+				echo "<tr>\n ";
+				echo "<td>",$row["make"],"</td>\n ";
+				echo "<td>",$row["model"],"</td>\n ";
+				echo "<td>",$row["price"],"</td>\n ";
+				echo "</tr>\n ";
+			}
+			echo "</table>\n ";
+			
+			mysqli_free_result($results);
 	}
 ?>
 	
