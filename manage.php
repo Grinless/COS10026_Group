@@ -33,13 +33,6 @@ Above php replaces the following code, HAS NOT BEEN TESTED YET
 	
 	<input class="submit" type="submit" value="Login" />
 	
-	
-<?php  // this will only action at the start of the form 
-	if username = "JsonNotFound" and password = "1234"
-		a = "manage_queries.php"
-	else
-		echo"<p>Please enter correct username and password</p>"
-?>
 	</form>
 	<footer>
 		<?php
