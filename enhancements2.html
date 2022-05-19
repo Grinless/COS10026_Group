@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Page containing a list of enhancements present within the page.">
+        <meta name="keywords" content="CSS, HTML, Enhancements, Video">
+        <meta name="author" content="Error 404 Json not found">
+        <title>Enhancements</title>
+        <link rel="stylesheet" href="styles/style.css"/>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
+
+    <body class="enhancements">
+        <header>
+            <!-- Navigation bar and title-->
+            <h1> {JSON} </h1>
+            <figure>
+                <a href="https://json.org"> <img class="logo" src="images/JSON_logo.png" alt="JSON logo"> </a>
+                <figcaption class="logo"><a href="https://json.org">Click to go to json.org</a></figcaption>
+            </figure>
+            <nav>
+                <a href="index.php">Home</a>|
+                <a href="topic.php">More info</a>|
+                <a href="quiz.php">Quiz</a>|
+                <a href="enhancements.html">Enhancements</a>|
+				<a href="manage.php">Management Login</a>
+            </nav>
+        </header>
+        <!--Page content start.-->
+        <section class="enhancements">
+            <h2>Enhancements.</h2>
+            <h3 class="elisthead">Current Website Enhancements.</h3>
+            <ol>
+                <li>
+                    <p class="elisthead">More secure access to management pages</p>
+                    <ul>
+                        <li class="elist">
+                            Use of php sessions to track the login state of the user. However, this functionality has shown to have issues with the swinburne mercury servers. The code needed for this enhancement exists but is not functional due to this constraint.
+                        </li>
+                        <li class="elist">
+                            Code used in login.php, session carried to manage_queries.php and manage.php:
+                            <p class="line">&lt;?php <br>
+                              include('menu.inc'); <br>
+                              require('validation.php'); <br>
+                              $username = $_POST[&quot;username&quot;]; <br>
+                              $password = $_POST[&quot;password&quot;]; <br>
+                              $username = sanitiseString($username); <br>
+                              $password = sanitiseString($password); <br>
+                              if ($_SESSION[&quot;attempts&quot;] == 3){ <br>
+                                header(&quot;location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage.php?PHPSESSID=&quot;.session_id()); exit; <br>
+                              }<br>
+                              if ((validate_string($username)) and (validate_string($password))){ <br>
+                                if ((isset($_SESSION[&quot;username&quot;])) and (isset($_SESSION[&quot;password&quot;]))){ <br>
+                                  $_SESSION[&quot;username&quot;] = $username; <br>
+                                  $_SESSION[&quot;password&quot;] = $password; <br>
+                                  if (check_login($_SESSION[&quot;username&quot;], $_SESSION[&quot;password&quot;])){ <br>
+                                    header(&quot;location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage_queries.php?PHPSESSID=&quot;.session_id()); <br>
+                                    $_SESSION[&quot;attempts&quot;] = 0; <br>
+                                  }else{ <br>
+                                    SESSION[&quot;attempts&quot;] += 1; <br>
+                                    header(&quot;location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage.php?PHPSESSID=&quot;.session_id()); <br>
+                                  }<br>
+                                }else{ <br>
+                                  $_SESSION[&quot;username&quot;] = $username; <br>
+                                  $_SESSION[&quot;password&quot;] = $password; <br>
+                                  if (check_login($_SESSION[&quot;username&quot;], $_SESSION[&quot;password&quot;])){ <br>
+                                    header(&quot;location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage_queries.php?PHPSESSID=&quot;.session_id()); <br>
+                                    $_SESSION[&quot;attempts&quot;] = 0;<br>
+                                  }else{<br>
+                                    $_SESSION[&quot;attempts&quot;] = 1; <br>
+                                    header(&quot;location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage.php?PHPSESSID=&quot;.session_id()); <br>
+                                  }<br>
+                                }<br>
+                              }else{ <br>
+                                header(&quot;location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage.php&quot;);<br>
+                              } <br>
+                              function check_login($username, $password){ <br>
+                                if (($username == &quot;JsonNotFound&quot;) and ($password == &quot;1234&quot;)){ <br>
+                                  return true; <br>
+                                }else{<br>
+                                  return false; <br>
+                                } <br>
+                              } ?&gt;</p>
+                        </li>
+                        <li class="elist">
+                            <p>Sessions would begin function here: </p><a href="manage.php">Management Login</a>
+                            <br />
+                            <br />
+                        </li>
+                    </ul>
+              </li>
+        <!--Page content End.-->
+		
+        <!--Footer and references. START.-->
+        <footer>
+            <br>
+            <ol><li>JSON logo credit: Wikimedia photo by Douglas Crawford. To view the original image: <a href="https://commons.wikimedia.org/wiki/File:JSON_vector_logo.svg">https://commons.wikimedia.org/wiki/File:JSON_vector_logo.svg</a></li></ol><br>
+            <p>
+                Authors:
+                <a href="mailto:103865794@student.swin.edu.au">Nathan Hoorbakht,</a>
+                <a href="mailto:103993239@student.swin.edu.au">Luke Batchelor,</a>
+                <a href="mailto:103842975@student.swin.edu.au">Md Ahnaf Islam,</a>
+                <a href="mailto:103862724@student.swin.edu.au">Cat Ater, </a>
+                <a href="mailto:103951761@student.swin.edu.au">Jay Stephan,</a>
+            </p>
+        </footer>
+        <!--Footer and references. END.-->
+    </body>
+</html>
