@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION = array();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +9,8 @@
     <?php require('header.inc');?>
   </head>
   <body>
-	  <?php include('menu.inc');
+	  <?php 
+	  include('menu.inc');
 	  require('validation.php');
 	  $username = $_POST["username"];
 	  $password = $_POST["password"];
@@ -27,7 +32,6 @@
 				  header("location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage.php?PHPSESSID=".session_id());
 			  }
 		  }else{
-			  session_start();
 			  $_SESSION["username"] = $username;
 			  $_SESSION["password"] = $password;
 			  if (check_login($_SESSION["username"], $_SESSION["password"])){
