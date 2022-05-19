@@ -21,8 +21,8 @@ session_start();
 	  }
 	  if ((validate_string($username)) and (validate_string($password))){
 		  if ((isset($_SESSION["username"])) and (isset($_SESSION["password"]))){
-			  $_SESSION["username"] = $_POST["username"];
-			  $_SESSION["password"] = $_POST["password"];
+			  $_SESSION["username"] = $username;
+			  $_SESSION["password"] = $password;
 			  if (check_login($_SESSION["username"], $_SESSION["password"])){
 				  header("location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage_queries.php?PHPSESSID=".session_id());
 				  $_SESSION["attempts"] = 0;
