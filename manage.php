@@ -14,9 +14,9 @@
 	<h1>Admin Login</h1>
 	<?php
 	if (isset($_SESSION["attempts"])){
-		echo "<form id=\"loginform\" method=\"post\" action=\"manage_queries.php?".session_id(); echo "\">";
+		echo "<form id=\"loginform\" method=\"post\" action=\"login.php?".session_id(); echo "\">";
 	}else{
-		echo "<form id=\"loginform\" method=\"post\" action=\"manage_queries.php\">";
+		echo "<form id=\"loginform\" method=\"post\" action=\"login.php\">";
 	}
 	?>
 	<!--
