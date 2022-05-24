@@ -16,8 +16,8 @@ session_start();
 	?>
 	<h1>Admin Login</h1>
 	<?php
-	echo "<p class=\"warning\"> Warning: login attempt failed, ".(3 - $_SESSION["$attempts"])." left</p>";
 	if (isset($_SESSION["attempts"])){
+		echo "<p class=\"warning\"> Warning: login attempt failed, ".(3 - $_SESSION["$attempts"])." left</p>";
 		echo "<form id=\"loginform\" method=\"post\" action=\"login.php?PHPSESSID=".session_id(); echo "\">";
 	}else{
 		echo "<form id=\"loginform\" method=\"post\" action=\"login.php\">";
