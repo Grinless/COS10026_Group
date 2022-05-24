@@ -332,21 +332,12 @@ function print_change($_ATTEMPT, $_NEWSCORE) {
 	} else {
 		// upon successful completion
 		$sql_table = "attempts";
-		
+	
 
-		//fetch table data
-		$query = "SELECT attempt_id, attempt_number, first_name, last_Name, student_id, score, date_time FROM attempts WHERE Attempt_id = $_ATTEMPT";
-
-		$results = mysqli_query($conn, $query);
-		
-		if(!$results) {
-			echo "<p>Something is wrong with ", $query, "</p>";
-		} else {
 			//update score
 			UPDATE $sql_table 
 			SET score = $_NEWSCORE 
 			WHERE attempt_id = $_ATTEMPT;
-		}
 													///Add a attempt updated msg	
 	}
 	mysqli_close($conn);
