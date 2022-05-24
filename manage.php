@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="description" content="List all user data" />
+	<meta name="description" content="Login page for manager functions"/>
 	<?php
 	require("header.inc");
 	?>
