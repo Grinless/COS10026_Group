@@ -2,25 +2,27 @@
 	if (isset($_POST['datatype'])) {
 		$datatype = ($_POST['datatype']);
 	}
-	if (isset($_POST['data'])) {
-		$_DATA = ($_POST['studentid']);
+	if (isset($_POST['studentid'])) {
+		$_STUDENT = ($_POST['studentid']);
 	}
-	if (isset($_POST['data'])) {
+	if (isset($_POST['attemptid'])) {
 		$_ATTEMPT = ($_POST['attemptid']);
 	}
-	if (isset($_POST['data'])) {
+	if (isset($_POST['newscore'])) {
 		$_NEWSCORE = ($_POST['newscore']);
 	}
 
-
-echo "<p>$_DATA</p>";
 
 		
 	if ($datatype == "all") {
 		print_all();
 	}
 	if ($datatype == "specificstudent") { 
-		print_specificstudent($_DATA);
+		if ($_STUDENT == "") {
+			echo "<p>Error: Please fill in student information into the <a href=\"manage_form.php\">form</a></p>";
+		} else {
+			print_specificstudent($_STUDENT);
+		}
 	} 
 	if ($datatype == "fullmarks") { 
 		print_fullmarks();
@@ -29,10 +31,20 @@ echo "<p>$_DATA</p>";
 		print_fail();
 	} 
 	if ($datatype == "delete") { 
-		print_delete($_ATTEMPT);
+		if ($_ATTEMPT != "") {
+			print_delete($_ATTEMPT);
+		} else {
+			echo "<p>Error: Please fill in attempt id information into the <a href=\"manage_form.php\">form</a></p>";
+		}
+
+		
 	} 
 	if ($datatype == "change") { 
-		print_change($_ATTEMPT, $_NEWSCORE);
+		if ($_ATTEMPT != "" and $_NEWSCORE != "") {
+			print_change($_ATTEMPT, $_NEWSCORE);
+		} else {
+			echo "<p>Error: Please fill in attempt id and new score information into the <a href=\"manage_form.php\">form</a></p>";
+		}
 	} 
 
 	
@@ -98,7 +110,7 @@ function print_all() {
 	
 }
 
-Function print_specificstudent($_DATA) {
+Function print_specificstudent($_STUDENT) {
 	//connect to the dataabse	
 	require ("settings.php"); 	//connection info
 	
@@ -116,7 +128,7 @@ Function print_specificstudent($_DATA) {
 		$sql_table = "attempts";
 		
 		//set up the SQL command to query or add data into the table
-		$query = "SELECT attempt_id, attempt_number, first_name, last_Name, student_id, score, date_time FROM attempts WHERE student_id like '$_DATA%'";
+		$query = "SELECT attempt_id, attempt_number, first_name, last_Name, student_id, score, date_time FROM attempts WHERE student_id like '$_STUDENT%'";
 
 		
 		$results = mysqli_query($conn, $query);
@@ -303,14 +315,19 @@ function print_delete($_ATTEMPT) {
 		//displays an error message
 		echo "<p>Database connection failure</p>";
 	} else {
-
-
-		// upon successful completion
-		$sql_table = "attempts";
 		
 		//set up the SQL command to query or add data into the table
 		$query = "DELETE FROM attempts WHERE attempt_id = $_ATTEMPT";
 
+
+		$results = mysqli_query($conn, $query);
+		
+		if(!$results) {
+			echo "<p>Error updating record</p>";
+		} else {			
+			echo "<p>Record updated successfully</p>";
+
+		}
 													///Add a attempt deleted msg	
 	}
 	mysqli_close($conn);
@@ -326,19 +343,22 @@ function print_change($_ATTEMPT, $_NEWSCORE) {
 
 
 	//checks of connection is successful
+	// Check connection
 	if (!$conn) {
 		//displays an error message
 		echo "<p>Database connection failure</p>";
 	} else {
-		// upon successful completion
-		$sql_table = "attempts";
-	
 
-			//update score
-			UPDATE $sql_table 
-			SET score = $_NEWSCORE 
-			WHERE attempt_id = $_ATTEMPT;
-													///Add a attempt updated msg	
+		$query = "UPDATE attempts SET score=$_NEWSCORE WHERE attempt_id=$_ATTEMPT";
+	
+		$results = mysqli_query($conn, $query);
+		
+		if(!$results) {
+			echo "<p>Error updating record</p>";
+		} else {			
+			echo "<p>Record updated successfully</p>";
+
+		}	
 	}
 	mysqli_close($conn);
 
