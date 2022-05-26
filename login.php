@@ -24,7 +24,7 @@ session_start();
 			  $_SESSION["username"] = $username;
 			  $_SESSION["password"] = $password;
 			  if (check_login($_SESSION["username"], $_SESSION["password"])){
-				  header("location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage_queries.php?PHPSESSID=".session_id());
+				  header("location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage_form.php?PHPSESSID=".session_id());
 				  $_SESSION["attempts"] = 0;
 			  }else{
 				  $_SESSION["attempts"] += 1;
@@ -34,7 +34,7 @@ session_start();
 			  $_SESSION["username"] = $username;
 			  $_SESSION["password"] = $password;
 			  if (check_login($_SESSION["username"], $_SESSION["password"])){
-				  header("location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage_queries.php?PHPSESSID=".session_id());
+				  header("location: https://mercury.swin.edu.au/cos10026/s103993239/assign3/manage_form.php?PHPSESSID=".session_id());
 				  $_SESSION["attempts"] = 0;
 			  }else{
 				  $_SESSION["attempts"] = 1;
