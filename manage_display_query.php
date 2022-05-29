@@ -108,7 +108,7 @@ function print_all() {
 		} else {
 			echo "<p>All student scores</p>";
 
-			echo "<table border=\"1\">\n";
+			echo "<table>\n";
 			echo "<tr>\n "
 				."<th scope=\"col\">attempt_id</th>\n "
 				."<th scope=\"col\">attempt_number</th>\n "
@@ -116,9 +116,7 @@ function print_all() {
 				."<th scope=\"col\">last_Name</th>\n "
 				."<th scope=\"col\">student_id</th>\n "
 				."<th scope=\"col\">score</th>\n "
-				."<th scope=\"col\">date_time</th>\n "
-
-				."</th>\n ";
+				."<th scope=\"col\">date_time</th>\n ";
 				
 				
 			While ($row = mysqli_fetch_assoc($results)) {
@@ -138,7 +136,7 @@ function print_all() {
 		mysqli_close($conn);
 	?>
 		<a href="manage_form.php">
-   		  <input type="submit" value="Return"/>
+   		  Return
    		</a>
 	<?php
 	}
@@ -178,7 +176,7 @@ Function print_specificstudentname($_STUDENTNAME) {
 			//	echo "<p class=\"blank\">There are no results</p>";     			////Need to fix db no result
 			//} else {
 
-				echo "<table border=\"1\">\n";
+				echo "<table>\n";
 					echo "<tr>\n "
 					."<th scope=\"col\">attempt_id</th>\n "
 					."<th scope=\"col\">attempt_number</th>\n "
@@ -186,9 +184,7 @@ Function print_specificstudentname($_STUDENTNAME) {
 					."<th scope=\"col\">last_Name</th>\n "
 					."<th scope=\"col\">student_id</th>\n "
 					."<th scope=\"col\">score</th>\n "
-					."<th scope=\"col\">date_time</th>\n "
-
-					."</th>\n ";
+					."<th scope=\"col\">date_time</th>\n ";
 				
 				
 				While ($row = mysqli_fetch_assoc($results)) {
@@ -211,7 +207,7 @@ Function print_specificstudentname($_STUDENTNAME) {
 	mysqli_close($conn);
 	?>
 		<a href="manage_form.php">
-   		  <input type="submit" value="Return"/>
+   		  Return
    		</a>
 	<?php
 
@@ -251,7 +247,7 @@ Function print_specificstudentid($_STUDENTID) {
 			//	echo "<p class=\"blank\">There are no results</p>";     			////Need to fix db no result
 			//} else {
 
-				echo "<table border=\"1\">\n";
+				echo "<table>\n";
 					echo "<tr>\n "
 					."<th scope=\"col\">attempt_id</th>\n "
 					."<th scope=\"col\">attempt_number</th>\n "
@@ -259,9 +255,7 @@ Function print_specificstudentid($_STUDENTID) {
 					."<th scope=\"col\">last_Name</th>\n "
 					."<th scope=\"col\">student_id</th>\n "
 					."<th scope=\"col\">score</th>\n "
-					."<th scope=\"col\">date_time</th>\n "
-
-					."</th>\n ";
+					."<th scope=\"col\">date_time</th>\n ";
 				
 				
 				While ($row = mysqli_fetch_assoc($results)) {
@@ -284,7 +278,7 @@ Function print_specificstudentid($_STUDENTID) {
 	mysqli_close($conn);
 	?>
 		<a href="manage_form.php">
-   		  <input type="submit" value="Return"/>
+   		  Return
    		</a>
 	<?php
 
@@ -323,7 +317,7 @@ Function print_fullmarks() {
 			//	echo "<p class=\"blank\">There are no results</p>";     			////Need to fix db no result
 			//} else {
 
-				echo "<table border=\"1\">\n";
+				echo "<table>\n";
 					echo "<tr>\n "
 					."<th scope=\"col\">attempt_id</th>\n "
 					."<th scope=\"col\">attempt_number</th>\n "
@@ -331,9 +325,7 @@ Function print_fullmarks() {
 					."<th scope=\"col\">last_Name</th>\n "
 					."<th scope=\"col\">student_id</th>\n "
 					."<th scope=\"col\">score</th>\n "
-					."<th scope=\"col\">date_time</th>\n "
-
-					."</th>\n ";
+					."<th scope=\"col\">date_time</th>\n ";
 				
 				
 				While ($row = mysqli_fetch_assoc($results)) {
@@ -356,7 +348,7 @@ Function print_fullmarks() {
 	mysqli_close($conn);
 	?>
 		<a href="manage_form.php">
-   		  <input type="submit" value="Return"/>
+   		  Return
    		</a>
 	<?php
 
@@ -393,7 +385,7 @@ Function print_fail() {
 			//	echo "<p class=\"blank\">There are no results</p>";     			////Need to fix db no result
 			//} else {
 
-				echo "<table border=\"1\">\n";
+				echo "<table>\n";
 					echo "<tr>\n "
 					."<th scope=\"col\">attempt_id</th>\n "
 					."<th scope=\"col\">attempt_number</th>\n "
@@ -401,9 +393,7 @@ Function print_fail() {
 					."<th scope=\"col\">last_Name</th>\n "
 					."<th scope=\"col\">student_id</th>\n "
 					."<th scope=\"col\">score</th>\n "
-					."<th scope=\"col\">date_time</th>\n "
-
-					."</th>\n ";
+					."<th scope=\"col\">date_time</th>\n ";
 				
 				
 				While ($row = mysqli_fetch_assoc($results)) {
@@ -426,7 +416,7 @@ Function print_fail() {
 	mysqli_close($conn);
 	?>
 		<a href="manage_form.php">
-   		  <input type="submit" value="Return"/>
+   		  Return
    		</a>
 	<?php
 }
@@ -461,7 +451,7 @@ function print_delete($_ATTEMPT) {
 	mysqli_close($conn);
 	?>
 		<a href="manage_form.php">
-   		  <input type="submit" value="Return"/>
+   		  Return
    		</a>
 	<?php
 }
@@ -496,7 +486,7 @@ function print_change($_ATTEMPT, $_NEWSCORE) {
 	mysqli_close($conn);
 	?>
 		<a href="manage_form.php">
-   		  <input type="submit" value="Return"/>
+   		  Return
    		</a>
 	<?php
 }
