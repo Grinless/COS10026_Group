@@ -25,13 +25,13 @@
 		<option value="change">Change a student's score (Attempt ID and New Score)</option><!-- given st id and attempt number (so display attempts then select attempt) -->
 	</select>
 
-	<p><label for="studentid">Student ID: &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+	<p><label for="studentid">Student ID: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 	   <input type="text" id="studentid" name="studentid" size="5"></p>
-	<p><label for="studentname">Student Name: &nbsp &nbsp</label>
+	<p><label for="studentname">Student Name: &nbsp; &nbsp;</label>
 	   <input type="text" id="studentname" name="studentname" size="5"></p>
-	<p><label for="attemptid">Attempt ID: &nbsp &nbsp &nbsp &nbsp &nbsp</label>	 			
+	<p><label for="attemptid">Attempt ID: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>	 			
 	   <input type="text" id="attemptid" name="attemptid" size="5"></p> 		
-	<p><label for="newscore">New Score: &nbsp &nbsp&nbsp &nbsp &nbsp</label>
+	<p><label for="newscore">New Score: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 	   <input type="text" id="newscore" name="newscore" size="5"></p>
 
 	</fieldset>
