@@ -23,10 +23,6 @@ session_start();
 		echo "<form id=\"loginform\" method=\"post\" action=\"login.php\">";
 	}
 	?>
-	<!--
-Above php replaces the following code, HAS NOT BEEN TESTED YET
-<form id="loginform" method="post" action="manage_queries.php">
--->
 	<fieldset id="LoginID">
 		<legend>Login:</legend>
 			<label for="username">Username</label>
