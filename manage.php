@@ -1,6 +1,23 @@
 <?php
 session_start();
 ?>
+<?php 
+date_default_timezone_set('Australia/Melbourne'); 
+ 
+//Calculate 60 days in the future
+//seconds * minutes * hours * days + current time
+ 
+$inTwoMonths = 60 * 60 * 24 * 60 + time();
+setcookie('lastVisit', date("G:i - d/m/y"), $inTwoMonths);
+if(isset($_COOKIE['lastVisit']))
+ 
+{
+$visit = $_COOKIE['lastVisit'];
+echo "<p class='align-center'>Your last visit was - $visit </p>";
+}
+else
+echo "You've got some stale cookies!"; 
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
