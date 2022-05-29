@@ -10,7 +10,7 @@
             	<a href="topic.php">More info</a>|
             	<a href="quiz.php">Quiz</a>|
             	<a href="enhancements.html">Enhancements</a>|
-		<a href="enhancements2.html">Enhancements 2</a>|
+		<a href="phpenhancements.html">PHP Enhancements</a>|
 		<a href="manage.php">Management Login</a>|
 		<a href="logout.php">Log Out</a>
         </nav>
